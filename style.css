@@ -6,6 +6,14 @@
     background-position: bottom;
 }
 
+h3 {
+    font-family: 'Staatliches', cursive;
+}
+
+h4 {
+    font-family: 'Staatliches', cursive;
+}
+
 #kontorsmaterial {
     height: 15rem;
     width: 30%;
