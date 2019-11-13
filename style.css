@@ -1,0 +1,30 @@
+.del-1 {
+    height: 25rem;
+    width: 100%;
+    background: url(headerbg2.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+#kontorsmaterial {
+    height: 15rem;
+    width: 30%;
+    background-color: white;
+    padding: 1rem;
+    position: relative;
+    top: 20%;
+    left: 20%;
+    opacity: 0.75;
+}
+
+.del-2 {
+    height: 1.7rem;
+    width: 97%;
+    padding: 1rem;
+    border: 0.5rem solid white;
+    background: lightgray;
+    text-transform: uppercase;
+    font-family: 'Staatliches', cursive;
+    font-size: 25px;
+    text-align: center;
+}
