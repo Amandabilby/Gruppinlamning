@@ -1,0 +1,46 @@
+body{
+    margin:0;
+    padding:0;
+    font-family: 'Abel', sans-serif;
+}
+
+h1{
+    font-family: 'Staatliches', cursive;
+}
+h3{
+    font-family: 'Staatliches', cursive;
+}
+
+.container {
+    width:90%;
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+}
+.fakta{
+    display:flex;
+    justify-content: flex-start;
+    margin-left: -2.5rem;
+}
+ul{
+    list-style: none;
+}
+th{
+    background-color: #C5D9F1 ;
+    border: solid black;
+}
+.produkter td{
+    border: solid black;
+}
+
+.summa{
+    display:flex;
+    margin-left: -2.5rem;
+}
+
+.totalsumma{
+    display:flex;
+    
+}
