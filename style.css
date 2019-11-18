@@ -9,9 +9,9 @@ body {
 }
 
 .del-1 {
+    border: 1rem solid white;
     height: 25rem;
-    width: 100%;
-    background: url("headerbg2.jpg");
+    background: url("bilder/headerbg2.jpg");
     background-size: cover;
     background-position: bottom;
 }
@@ -33,6 +33,9 @@ h4 {
     top: 20%;
     left: 20%;
     opacity: 0.75;
+    overflow: scroll;
+    border: 0.3rem solid #f0dae6;
+
 }
 
 #tillprodukterna {
@@ -54,9 +57,9 @@ h4 {
 
 .del-2 {
     height: 4.3rem;
-    padding: 1rem;
+    padding: rem;
     border: 1rem solid white;
-    background: lightgray;
+    background: #e7e7e9;
     text-transform: uppercase;
     font-family: 'Staatliches', cursive;
     font-size: 23px;
@@ -67,13 +70,19 @@ h4 {
 }
 
 .bild {
-    height: 20rem;
-    background: url(officesupply.jpg);
+    height: 35rem;
+    border: 1rem solid white;
+
+    background: url(bilder/banner.jpg);
     background-image: cover;
+    bottom: 30%;
+    background-size: 100%;
 }
 
 .omosspaket {
-    background-color:lightgrey;
+    border: 1rem solid white;
+
+    background-color:#e7e7e9;
     padding: 2rem;
     display: flex;
     flex-direction: row;
@@ -85,6 +94,8 @@ h4 {
     background-color: white;
     padding: 1rem;
     opacity: 0.9;
+    overflow: scroll;
+border: 0.3rem solid #f0dae6;
 }
 
 #vårapaket {
@@ -92,12 +103,29 @@ h4 {
     background: white;
     padding: 1rem;
     opacity: 0.9;
+    border: 0.3rem solid #f0dae6;
 
 }
 
 footer {
-    background:lightgray;
+    background:#e7e7e9;
     display: flex;
     justify-content: space-around;
+    border: 1rem solid white;
+    height: 12rem;
 }
 
+.copy {
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+#länk:visited {
+        text-decoration: none;
+        color: black;
+}
+
+#länk:link {
+    text-decoration: none;
+    color:black;
+}
