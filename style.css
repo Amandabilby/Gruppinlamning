@@ -1,3 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+  }
+
 body {
     font-family: 'Abel', sans-serif;
     font-size: 18px;
@@ -8,6 +15,29 @@ body {
     width: 90%;
 }
 
+.navbar {
+    background: lightgrey;
+    display: flex;
+    padding-right: 38px;
+    overflow: hidden;
+    list-style-type: none;
+    justify-content: space-around;
+}
+
+li a {
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    color: white;
+    opacity: 1;
+    transition: 0.2s;
+    
+  }
+  
+  li a:hover {
+    color: black;
+    opacity: 1;
+  }
 .del-1 {
     border: 1rem solid white;
     height: 25rem;
