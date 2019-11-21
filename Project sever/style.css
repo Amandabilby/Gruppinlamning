@@ -1,0 +1,34 @@
+body{
+--back-col: #0E1C36;
+--font-col: #EEEBD3;
+--blue: #176087;
+--teal: #2B9EB3;
+--pop: #C3F73A;
+font-family: 'Exo','Tajawal', sans-serif;
+}
+header {
+    background-color: var(--back-col);
+    
+}
+.header__logo{
+
+}
+.nav{
+
+}
+
+.nav__ul{
+display:flex;
+}
+
+.nav__li{
+    font-family: 'Exo';
+    display: block;
+    list-style:none;
+    background-color: var(--blue);
+    border-radius: 4px;
+    padding:.5rem;
+    margin:1rem;
+    color: var(--pop);
+    border: 2px blue;
+}
