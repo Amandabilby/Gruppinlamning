@@ -4,9 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Staatliches&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="faktura.css">
     <title>Document</title>
 </head>
 <body>
+    <div class="container">
+
+
+            <button class="open-button" onclick="openForm()">Uppgifter</button>
+
+            <div class="form-popup" id="myForm">
+              <form  class="form-container">
+                <h1>Uppgifter</h1>
+            
+                <label for="text"><b>Företagsnamn</b></label>
+                <input type="text" class="foretagsnamn" placeholder="Företagsnamn" name="Företagsnamn" required>
+            
+                <label for="psw"><b>Adress</b></label>
+                <input type="text" class="adress" placeholder="Adress" name="adress" required>
+
+                <label for="psw"><b>Referens</b></label>
+                <input type="text" class="referens" placeholder="Referens" name="referens">
+            
+              
+               
+              </form>
+              <button type="button" class="btn" onclick="closeForm()">Stäng</button>
+              <button type="submit" class="btn" id="sbtn">Submit</button>
+            </div>
+
+
     <div class="huvud">
         <h1 class="firma">Kontex</h1>
         <p>storgatan 1 13145 stockholm</p>
@@ -14,10 +44,10 @@
     </div>
 
     <div class="mottagare">
-        <h1>mottagare</h1>
-        <p class="motagare__p">något något</p>
+        <h3>mottagare</h3>
+        <p class="mottagare__p">något något</p>
     </div>
-
+    
     <div class="fakta">
        <ul class="fakta__konstanter">
            <li>Fakturanummer</li>
@@ -33,16 +63,16 @@
        </ul>
 
         <ul class="fakta__variabler">
-            <li class="fakturaNummer"></li>
-            <li class="kundNummer"></li>
-            <li class="erReferens"></li>
-            <li class="vårReferens"></li>
-            <li class="betalningsVilkår"></li>
-            <li class="fakturaDatum"></li>
-            <li class="förfalloDatum"></li>
-            <li class="dröjsmålsränta"></li>
-            <li class="plusgiroNummer"></li>
-            <li class="bankgiroNummer"></li>
+            <li class="fakturaNummer">1</li>
+            <li class="kundNummer">2</li>
+            <li class="erReferens">nils</li>
+            <li class="vårReferens">ingvar</li>
+            <li class="betalningsVilkår">w00t</li>
+            <li class="fakturaDatum">25</li>
+            <li class="förfalloDatum">27</li>
+            <li class="dröjsmålsränta">5%</li>
+            <li class="plusgiroNummer">1992-22</li>
+            <li class="bankgiroNummer">3123321-4</li>
         </ul>
     </div>
     <table class="produkter">
@@ -74,14 +104,14 @@
                   <li>Öresutgämning</li>
               </ul>
               <ul>
-                  <li class="summa_bfm"></li>
-                  <li class="totalMoms"></li>
-                  <li class="oresugamning"></li>
+                  <li class="summa_bfm">89</li>
+                  <li class="totalMoms">6</li>
+                  <li class="oresugamning">2500</li>
               </ul>
           </div>
           <div class="totalsumma">
-              <h1>Summa att betala</h1>
-              <h1 class="totalsumma__summa"></h1>
+              <h3>Summa att betala</h3>
+              <h3 class="totalsumma__summa"> 2500</h3>
           </div>
 
           <div class="fakFooter">
@@ -115,7 +145,7 @@
               </table>
           </div>
 
-
-    
+        </div>
+    <script src="faktura.js"></script>
 </body>
 </html>

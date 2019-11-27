@@ -19,6 +19,9 @@ h3{
     justify-content: flex-start;
     
 }
+.btn{
+    margin:0.5rem;
+}
 .fakta{
     display:flex;
     justify-content: flex-start;
@@ -26,6 +29,9 @@ h3{
 }
 ul{
     list-style: none;
+}
+li{
+    list-style:none;
 }
 th{
     background-color: #C5D9F1 ;
@@ -44,3 +50,52 @@ th{
     display:flex;
     
 }
+
+.fakFooter{
+    margin-bottom: 1rem;
+}
+
+/* popup */
+
+.form-popup {
+    display: none;
+    position: fixed;
+    bottom: 15%;
+    right: 0px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+    margin:1rem;
+  }
+
+  .open-button {
+    background-color: #555;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    width: 280px;
+    right: 0px;
+    margin:1rem;
+  }
+
+  .form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+  }
+
+  .form-container input[type=text], .form-container input[type=password] {
+    width:90%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+  }
+
+  .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+
