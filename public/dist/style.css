@@ -98,7 +98,7 @@ body {
   overflow: hidden;
   list-style-type: none;
   justify-content: space-around; }
-  .navbar__lista {
+  .navbar li a {
     display: block;
     text-align: center;
     padding: 14px 16px;
@@ -106,7 +106,7 @@ body {
     opacity: 1;
     transition: 0.2s;
     text-decoration: none; }
-    .navbar__lista a:hover {
+    .navbar li a:hover {
       color: black;
       opacity: 1; }
 
