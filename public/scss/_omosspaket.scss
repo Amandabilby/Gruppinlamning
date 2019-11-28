@@ -1,0 +1,28 @@
+.omosspaket {
+    border: 1rem solid white;
+
+    background-color: $light-gray;
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+
+ #omoss {
+    width: 25rem;
+    background-color: white;
+    padding: 1rem;
+    opacity: 0.9;
+    overflow: scroll;
+border: 0.3rem solid $light-pink;
+}
+
+ #vårapaket {
+    width: 25rem;
+    background: white;
+    padding: 1rem;
+    opacity: 0.9;
+    border: 0.3rem solid $light-pink;
+
+}
+}

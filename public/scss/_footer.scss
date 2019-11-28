@@ -1,0 +1,45 @@
+.footer {
+    background:$light-gray;
+    display: flex;
+    justify-content: space-around;
+    border: 1rem solid white;
+    height: 12rem;
+
+.copy {
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+#länk:visited {
+        text-decoration: none;
+        color: black;
+}
+
+#länk:link {
+    text-decoration: none;
+    color:black;
+}
+
+h4 {
+        font-family: 'Staatliches', cursive;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .footer {
+        font-size: 11px;
+        height: 7rem;
+       
+    }
+    .copy {
+        font-size: 7px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .logga {
+        width: 100px;
+        height: 50px;
+    }
+}

@@ -7,15 +7,27 @@
     <link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Staatliches&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Kontex Kontorsmaterial</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="public/dist/style.css">
+    
 </head>
 <body>
 <div class="container">
+    
+   
 <!-- Logga och navbar -->
+
 <div class="header">
-    <a href="index.html"><img src="Bilder/logga.png" alt="logga"></a>
+    <a href="index.html"><img src="public/bilder/logga.png" alt="logga"></a>
+     <!-- Sökknapp -->
+     <form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
+        <input type="text" placeholder="Sök..." name="search2">
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
+
+
 <div class="navbar">
     <li><a class="active">Hem</a></li>
     <li><a href="#Produkter">Produkter</a></li>
@@ -25,7 +37,7 @@
 </div>
 
 
-<!-- Del 1  -->
+<!-- Kontorsmaterial & "till produkterna"  -->
 
 <div class="del-1">
   <div id="kontorsmaterial"> 
@@ -39,12 +51,12 @@
 
 
 
-<div class="del-2">
+<div class="leveransochfraktfritt">
 <p><i class="fas fa-truck"></i>Snabba leveranser! 1-3 Arbetsdagar</p>
 <p><i class="fas fa-shopping-bag"></i>Fraktfritt vid köp över 399kr</p>
 </div>
 
-<div class="bild">
+<div class="bannerbild">
     
     </div>
 
@@ -66,7 +78,7 @@
 <footer class="footer">
         <span>
 <br>
-<img src="bilder/logga.png" alt="logga">
+<img class ="logga" src="public/bilder/logga.png" alt="logga">
 <br><br>
 <div class="copy">
 &copy; Kontex kontorsmaterial AB 

@@ -1,0 +1,81 @@
+.del-1 {
+    border: 1rem solid white;
+    height: 25rem;
+    background: url("./bilder/headerbg2.jpg");
+    background-size: cover;
+    background-position: bottom;
+
+    h3 {
+        font-family: $font-famrubrik;
+    }
+    
+    h4 {
+        font-family: $font-famrubrik;
+    }
+}
+
+
+
+#kontorsmaterial {
+    height: $kontorsmat-height;
+    width: $kontorsmat-width;
+    background-color: $bgcol-white;
+    padding: $kontorsmat-padding;
+    position: relative;
+    top: 20%;
+    left: 20%;
+    opacity: 0.75;
+    overflow: scroll;
+    border: 0.3rem solid #f0dae6;
+
+}
+
+#tillprodukterna {
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 4px;
+    font-size: 13px;
+
+
+    a:link {
+    text-decoration: none;
+    color: $link-col;
+}
+
+    a:visited {
+    text-decoration: none;
+    color: $link-col;
+}
+}
+
+.leveransochfraktfritt {
+    height: 4.3rem;
+    padding: rem;
+    border: 1rem solid white;
+    background: $light-gray;
+    text-transform: uppercase;
+    font-family: $font-famrubrik;
+    font-size: $leverans-fontsize;
+    letter-spacing: 4px;
+    display: flex;
+    justify-content:space-around; 
+  
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .leveransochfraktfritt {
+        font-size: 14px;
+        height: 3.5rem;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .leveransochfraktfritt {
+        font-size: 16px;
+        height: 3.5rem;
+        text-align: center;
+    }
+}
