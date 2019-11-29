@@ -1,0 +1,55 @@
+h3 {
+    text-align: center;
+    color: black;
+    font-size: 50px;
+    font-family: 'Abel', sans-serif;
+
+
+
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: transparent;
+    
+  }
+  
+  .flex-container > div {
+    background-color: #f1f1f1;
+    width: auto;
+    margin: 10px;
+    text-align: center;
+    line-height: 32px;
+    font-size: 28px;
+    font-family: 'Abel', sans-serif; 
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+  }
+
+  .flex-container > div > h1 {
+    line-height: 55px;
+  }
+  
+  .price {
+    color: grey;
+    font-size: 22px;
+  }
+  
+  .flex-container button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  .flex-container button:hover {
+    opacity: 0.7;
+  }
+  
