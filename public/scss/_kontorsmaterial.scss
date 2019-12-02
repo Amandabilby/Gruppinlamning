@@ -1,7 +1,7 @@
 .del-1 {
     border: 1rem solid white;
     height: 25rem;
-    background: url("./bilder/headerbg2.jpg");
+    background: url("../bilder/headerbg2.jpg");
     background-size: cover;
     background-position: bottom;
 
@@ -18,7 +18,7 @@
 
 #kontorsmaterial {
     height: $kontorsmat-height;
-    width: $kontorsmat-width;
+    width: 40%;
     background-color: $bgcol-white;
     padding: $kontorsmat-padding;
     position: relative;

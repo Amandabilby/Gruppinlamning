@@ -1,12 +1,13 @@
 .navbar {
-    background: lightgrey;
+    background: $light-gray;
     display: flex;
     padding-right: 38px;
     overflow: hidden;
     list-style-type: none;
     justify-content: space-around;
+    border: 1rem solid white;
 
-    &__lista {
+    li a {
     display: block;
     text-align: center;
     padding: 14px 16px;
@@ -14,12 +15,12 @@
     opacity: 1;
     transition: 0.2s;
     text-decoration: none;
-
-     a:hover {
+    }
+    li a:hover {
     color: black;
     opacity: 1;
   }
-  }
+  
 
  
 }

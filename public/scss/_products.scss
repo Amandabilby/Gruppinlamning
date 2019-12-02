@@ -1,0 +1,239 @@
+.produkter {
+    border: 1rem solid white;
+    padding: 2rem;
+    display: grid;
+    justify-content: center;
+    grid-row-gap: 3rem;
+    grid-column-gap: 0.5rem;
+    background-color: transparent;
+    overflow: auto;
+
+    h2 {
+        letter-spacing: 5px;
+        font-display: uppercase;
+    }
+    
+  }
+
+#produktrubrik {
+    width: 100%;
+    height: 5rem; 
+    grid-column-start: 1;
+    grid-column-end: 3;
+    text-align: center;
+    color: gray;
+    font-size: 60px;
+    font-family: $font-famrubrik;
+    letter-spacing: 20px;
+
+    
+}
+  
+#stilren {
+    padding: 2rem;
+    background-color: #f1f1f1;
+    width: 80%;
+    height: 45rem;
+    text-align: center;
+    line-height: 32px;
+    font-size: 28px;
+    font-family: 'Abel', sans-serif; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    grid-row-start: 2;
+    grid-column-start: 1;
+    border: 0.2rem solid $light-pink;
+
+
+  }
+  #jordnara {
+    padding: 2rem;
+    background-color: #f1f1f1;
+    width: 80%;
+    height: 45rem;
+    text-align: center;
+    line-height: 32px;
+    font-size: 28px;
+    font-family: 'Abel', sans-serif; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    grid-row-start: 2;
+    grid-column-start: 2;
+    border: 0.2rem solid $light-pink;
+
+
+  }
+
+  #havet {
+    padding: 2rem;
+    background-color: #f1f1f1;
+    width: 80%;
+    height: 45rem;
+    text-align: center;
+    line-height: 32px;
+    font-size: 28px;
+    font-family: 'Abel', sans-serif; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    grid-row-start: 3;
+    grid-column-start: 1;
+    border: 0.2rem solid $light-pink;
+
+    
+
+  }
+
+  #studio {
+    padding: 2rem;
+    background-color: #f1f1f1;
+    width: 80%;
+    height: 45rem;
+    text-align: center;
+    line-height: 32px;
+    font-size: 28px;
+    font-family: 'Abel', sans-serif; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    grid-row-start: 3;
+    grid-column-start: 2;
+    border: 0.2rem solid $light-pink;
+
+  }
+  
+  .price {
+    color: grey;
+    font-size: 22px;
+  }
+  
+  .produkter button {
+    outline: 0;
+    padding: 12px;
+    color: black;
+    background-color: white;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  .produkter button:hover {
+    opacity: 0.7;
+  }
+  
+   @media screen and (min-width:501px) and (max-width: 800px) {
+
+    .produkter {
+        border: 1rem solid white;
+        padding: 2rem;
+        overflow: scroll;
+
+    }
+    #produkrubrik {
+        font-size: 40px;
+    }
+         
+       #stilren {
+           background-color: #f1f1f1;
+           width: 15rem;
+           height: 30rem;
+           text-align: center;
+           line-height: 32px;
+           font-size: 18px;
+           font-family: 'Abel', sans-serif; 
+           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+           grid-row-start: 2;
+           grid-column-start: 1;
+       
+         }
+         #jordnara {
+           background-color: #f1f1f1;
+           width: 15rem;
+           height: 30rem;
+           text-align: center;
+           line-height: 32px;
+           font-size: 18px;
+           font-family: 'Abel', sans-serif; 
+           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+           grid-row-start: 2;
+           grid-column-start: 2;
+       
+         }
+       
+         #havet {
+           background-color: #f1f1f1;
+           width: 15rem;
+           height: 30rem;
+           text-align: center;
+           line-height: 32px;
+           font-size: 18px;
+           font-family: 'Abel', sans-serif; 
+           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+           grid-row-start: 3;
+           grid-column-start: 1;
+           
+       
+         }
+       
+         #studio {
+           background-color: #f1f1f1;
+           width: 15rem;
+           height: 30rem;
+           text-align: center;
+           line-height: 32px;
+           font-size: 18px;
+           font-family: 'Abel', sans-serif; 
+           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+           grid-row-start: 3;
+           grid-column-start: 2;
+       
+         }
+       
+   
+   
+   }
+ 
+
+
+@media only screen and (max-width: 600px) {
+    .produkter {
+        display: grid;
+        justify-items: center;
+            border: 1rem solid white;
+            padding: 2rem;
+        
+    }    
+    #produktrubrik {
+        font-size: 30px;    }
+         
+       #stilren {
+           width: 20rem;
+           height: 30rem;
+           font-size: 16px;
+           grid-row-start: 2;
+           grid-column-start: 1;
+       
+         }
+         #jordnara {
+            width: 20rem;
+            height: 30rem;
+            font-size: 16px;
+         grid-row-start: 3;
+           grid-column-start: 1;
+       
+         }
+       
+         #havet {
+            width: 20rem;
+            height: 30rem;
+            font-size: 16px;
+           grid-row-start: 4;
+           grid-column-start: 1;
+           
+       
+         }
+       
+         #studio {
+            width: 20rem;
+            height: 30rem;
+            font-size: 16px;
+           grid-row-start: 5;
+           grid-column-start: 1;
+         }
+
+        }
