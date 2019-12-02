@@ -38,28 +38,15 @@ fakturaNummer.innerHTML = Math.floor(Math.random() * 100000);
 const kundNummer = document.querySelector(".kundNummer")
 kundNummer.innerHTML = Math.floor(Math.random() * 10000)
 
+
+
 // Räkna produkter
 
-function RäknaKostnad(){
-  const Produkt = document.querySelector(".produkt").value;
-  const Moms = .25;
-
-  console.log(Number(Produkt)+Produkt*Moms); //Number för att fixa till siffror istället för string.
-  document.querySelector("div").innerHTML = +Produkt+Produkt*Moms;
-  return Produkt+Produkt*Moms;
+const products {
   
 }
 
-const raknabtn = document.querySelector(".rakna");
 
-raknabtn.addEventListener("click", RäknaKostnad);
-
-
-const div = document.createElement("div");
-const li = document.createElement("li");
-
-const ul = document.querySelector("ul");
-ul.appendChild(li.textContent="Det här är från JS");
 
 
 
