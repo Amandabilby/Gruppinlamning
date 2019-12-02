@@ -42,15 +42,47 @@ kundNummer.innerHTML = Math.floor(Math.random() * 10000)
 
 // Räkna produkter
 
-const products {
-  
+const produkEtt = {
+  beskrivning: "Skrivbord",
+  antal: 0,
+  enhet: 0,
+  apris: 0,
+  moms: 0,
+  momskr: 0,
+  belopp: 0
+
 }
 
+const produktTvå = {
+  beskrivning: "Bokhylla",
+  antal: 0,
+  enhet: 0,
+  apris: 0,
+  moms: 0,
+  momskr: 0,
+  belopp: 0
+}
+   
+const produktTre = {
+  beskrivning: "konferensbord",
+  antal: 0,
+  enhet: 0,
+  apris: 0,
+  moms: 0,
+  momskr: 0,
+  belopp: 0
+}
 
+const produktFyra = {
+  beskrivning: "whiteboard",
+  antal: 0,
+  enhet: 0,
+  apris: 0,
+  moms: 0,
+  momskr: 0,
+  belopp: 0
+}
 
-
-
-
-
+let produkter = [productEtt, produktTvå, produktTre, produktFyra]
 
 
