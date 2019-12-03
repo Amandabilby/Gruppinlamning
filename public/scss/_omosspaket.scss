@@ -9,20 +9,40 @@
 
 
  #omoss {
-    width: 25rem;
+    width: 15rem;
     background-color: white;
     padding: 1rem;
     opacity: 0.9;
     overflow: scroll;
 border: 0.3rem solid $light-pink;
+height: 20rem;
+overflow: scroll;
+
 }
 
  #vårapaket {
-    width: 25rem;
+    width: 15rem;
     background: white;
     padding: 1rem;
     opacity: 0.9;
     border: 0.3rem solid $light-pink;
+    height: 20rem;
+    overflow: scroll;
+
 
 }
+}
+
+@media screen and (max-width: 600px) {
+    #omoss {
+        height: 8rem;
+        overflow: scroll;
+        font-size: 14px;
+    }
+
+    #vårapaket {
+        height: 8rem;
+        overflow: scroll;
+        font-size: 14px;
+    }
 }

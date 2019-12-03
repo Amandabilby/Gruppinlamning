@@ -67,15 +67,19 @@
 @media screen and (max-width: 768px) {
     .leveransochfraktfritt {
         font-size: 14px;
-        height: 3.5rem;
+        height: 4rem;
         text-align: center;
+    }
+
+    #kontorsmaterial {
+        font-size: 14px;
     }
 }
 
 @media screen and (max-width: 1300px) {
     .leveransochfraktfritt {
         font-size: 16px;
-        height: 3.5rem;
+        height: 4rem;
         text-align: center;
     }
 }

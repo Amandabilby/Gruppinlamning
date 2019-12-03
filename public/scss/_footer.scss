@@ -4,6 +4,7 @@
     justify-content: space-around;
     border: 1rem solid white;
     height: 12rem;
+    line-height: 24px;
 
 .copy {
     font-size: 12px;
@@ -29,7 +30,7 @@ h4 {
 @media screen and (max-width: 768px) {
     .footer {
         font-size: 11px;
-        height: 7rem;
+        height: 10rem;
        
     }
     .copy {
@@ -42,4 +43,31 @@ h4 {
         width: 100px;
         height: 50px;
     }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .footer {
+        display: grid;
+        height: 25rem;
+    }
+#kontex {
+    grid-row-start: 1;
+    grid-column-start: 1;
+}
+#kundtjanst {
+    grid-row-start: 1;
+    grid-column-start: 2;
+
+}
+#foljoss {
+    grid-row-start: 2;
+    grid-column-start: 1;
+
+}
+#betalning {
+    grid-row-start: 2;
+    grid-column-start: 2;
+}
+
 }
