@@ -1,0 +1,33 @@
+.bannerbild {
+    height: 35rem;
+    border: 1rem solid white;
+    background: url("../bilder/banner.jpg");
+   /* background-image: cover; */
+    bottom: 30%;
+    background-size: 100%;
+}
+
+@media only screen and (max-width: 1200px) {
+    .bannerbild {
+        height: 25rem;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .bannerbild {
+        height: 18rem;
+    }
+   }
+
+
+@media only screen and (max-width: 650px) {
+    .bannerbild {
+        height: 13rem;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+ .bannerbild {
+     height: 10rem;
+ }
+}

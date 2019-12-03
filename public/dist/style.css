@@ -1,0 +1,532 @@
+@charset "UTF-8";
+body {
+  font-family: "Abel", sans-serif;
+  font-size: 18px; }
+
+.del-1 {
+  border: 1rem solid white;
+  height: 25rem;
+  background: url("../bilder/headerbg2.jpg");
+  background-size: cover;
+  background-position: bottom; }
+  .del-1 h3 {
+    font-family: "Staatliches", cursive; }
+  .del-1 h4 {
+    font-family: "Staatliches", cursive; }
+
+#kontorsmaterial {
+  height: 15rem;
+  width: 40%;
+  background-color: white;
+  padding: 1rem;
+  position: relative;
+  top: 20%;
+  left: 20%;
+  opacity: 0.75;
+  overflow: scroll;
+  border: 0.3rem solid #f0dae6; }
+
+#tillprodukterna {
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 4px;
+  font-size: 13px; }
+  #tillprodukterna a:link {
+    text-decoration: none;
+    color: gray; }
+  #tillprodukterna a:visited {
+    text-decoration: none;
+    color: gray; }
+
+.leveransochfraktfritt {
+  height: 4.3rem;
+  padding: rem;
+  border: 1rem solid white;
+  background: #e7e7e9;
+  text-transform: uppercase;
+  font-family: "Staatliches", cursive;
+  font-size: 23px;
+  letter-spacing: 4px;
+  display: flex;
+  justify-content: space-around; }
+
+@media screen and (max-width: 768px) {
+  .leveransochfraktfritt {
+    font-size: 14px;
+    height: 4rem;
+    text-align: center; }
+  #kontorsmaterial {
+    font-size: 14px; } }
+
+@media screen and (max-width: 1300px) {
+  .leveransochfraktfritt {
+    font-size: 16px;
+    height: 4rem;
+    text-align: center; } }
+
+.bannerbild {
+  height: 35rem;
+  border: 1rem solid white;
+  background: url("../bilder/banner.jpg");
+  /* background-image: cover; */
+  bottom: 30%;
+  background-size: 100%; }
+
+@media only screen and (max-width: 1200px) {
+  .bannerbild {
+    height: 25rem; } }
+
+@media only screen and (max-width: 900px) {
+  .bannerbild {
+    height: 18rem; } }
+
+@media only screen and (max-width: 650px) {
+  .bannerbild {
+    height: 13rem; } }
+
+@media only screen and (max-width: 500px) {
+  .bannerbild {
+    height: 10rem; } }
+
+.omosspaket {
+  border: 1rem solid white;
+  background-color: #e7e7e9;
+  padding: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; }
+  .omosspaket #omoss {
+    width: 15rem;
+    background-color: white;
+    padding: 1rem;
+    opacity: 0.9;
+    overflow: scroll;
+    border: 0.3rem solid #f0dae6;
+    height: 20rem;
+    overflow: scroll; }
+  .omosspaket #vårapaket {
+    width: 15rem;
+    background: white;
+    padding: 1rem;
+    opacity: 0.9;
+    border: 0.3rem solid #f0dae6;
+    height: 20rem;
+    overflow: scroll; }
+
+@media screen and (max-width: 600px) {
+  #omoss {
+    height: 8rem;
+    overflow: scroll;
+    font-size: 14px; }
+  #vårapaket {
+    height: 8rem;
+    overflow: scroll;
+    font-size: 14px; } }
+
+.navbar {
+  background: #e7e7e9;
+  display: flex;
+  padding-right: 38px;
+  overflow: hidden;
+  list-style-type: none;
+  justify-content: space-around;
+  border: 1rem solid white; }
+  .navbar li a {
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    color: white;
+    opacity: 1;
+    transition: 0.2s;
+    text-decoration: none; }
+  .navbar li a:hover {
+    color: black;
+    opacity: 1; }
+
+.footer {
+  background: #e7e7e9;
+  display: flex;
+  justify-content: space-around;
+  border: 1rem solid white;
+  height: 12rem;
+  line-height: 24px; }
+  .footer .copy {
+    font-size: 12px;
+    text-transform: uppercase; }
+  .footer #länk:visited {
+    text-decoration: none;
+    color: black; }
+  .footer #länk:link {
+    text-decoration: none;
+    color: black; }
+  .footer h4 {
+    font-family: 'Staatliches', cursive; }
+
+@media screen and (max-width: 768px) {
+  .footer {
+    font-size: 11px;
+    height: 10rem; }
+  .copy {
+    font-size: 7px;
+    font-weight: bold;
+    text-transform: uppercase; }
+  .logga {
+    width: 100px;
+    height: 50px; } }
+
+@media only screen and (max-width: 600px) {
+  .footer {
+    display: grid;
+    height: 25rem; }
+  #kontex {
+    grid-row-start: 1;
+    grid-column-start: 1; }
+  #kundtjanst {
+    grid-row-start: 1;
+    grid-column-start: 2; }
+  #foljoss {
+    grid-row-start: 2;
+    grid-column-start: 1; }
+  #betalning {
+    grid-row-start: 2;
+    grid-column-start: 2; } }
+
+.container {
+  margin: auto;
+  width: 90%; }
+
+.example {
+  position: absolute;
+  top: 5%;
+  left: 80%;
+  display: flex;
+  flex-direction: row; }
+
+/* Style the search field */
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid #e7e7e9;
+  float: left;
+  width: 130px;
+  background: #f1f1f1;
+  font-family: "Abel", sans-serif; }
+
+/* Style the submit button */
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #e7e7e9;
+  color: white;
+  font-size: 17px;
+  border: 1px solid #e7e7e9;
+  border-left: none;
+  /* Prevent double borders */
+  cursor: pointer;
+  font-family: "Abel", sans-serif; }
+
+form.example button:hover {
+  background: #f0dae6; }
+
+/* Clear floats */
+form.example::after {
+  content: "";
+  clear: both;
+  display: table; }
+
+@media screen and (max-width: 760px) {
+  .example {
+    position: absolute;
+    top: 5%;
+    left: 60%;
+    display: flex;
+    flex-direction: row; } }
+
+#produktrubrik {
+  width: 100%;
+  height: 3rem;
+  text-align: center;
+  color: gray;
+  font-size: 60px;
+  font-family: "Staatliches", cursive;
+  letter-spacing: 30px; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+.produkter {
+  border: 1rem solid white;
+  padding: 2rem;
+  display: grid;
+  justify-content: center;
+  grid-row-gap: 3rem;
+  grid-column-gap: 0.5rem;
+  background-color: transparent; }
+  .produkter h2 {
+    letter-spacing: 5px;
+    font-display: uppercase; }
+
+#stilren {
+  padding: 2rem;
+  background-color: #f1f1f1;
+  width: 80%;
+  height: 45rem;
+  text-align: center;
+  line-height: 32px;
+  font-size: 28px;
+  font-family: 'Abel', sans-serif;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  grid-row-start: 2;
+  grid-column: 1;
+  border: 0.2rem solid #f0dae6;
+  overflow: scroll; }
+
+#jordnara {
+  padding: 2rem;
+  background-color: #f1f1f1;
+  width: 80%;
+  height: 45rem;
+  text-align: center;
+  line-height: 32px;
+  font-size: 28px;
+  font-family: 'Abel', sans-serif;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  grid-row-start: 2;
+  grid-column: 2;
+  border: 0.2rem solid #f0dae6;
+  overflow: scroll; }
+
+#havet {
+  padding: 2rem;
+  background-color: #f1f1f1;
+  width: 80%;
+  height: 45rem;
+  text-align: center;
+  line-height: 32px;
+  font-size: 28px;
+  font-family: 'Abel', sans-serif;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  grid-row-start: 3;
+  grid-column-start: 1;
+  border: 0.2rem solid #f0dae6;
+  overflow: scroll; }
+
+#studio {
+  padding: 2rem;
+  background-color: #f1f1f1;
+  width: 80%;
+  height: 45rem;
+  text-align: center;
+  line-height: 32px;
+  font-size: 28px;
+  font-family: 'Abel', sans-serif;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  grid-row-start: 3;
+  grid-column-start: 2;
+  border: 0.2rem solid #f0dae6;
+  overflow: scroll; }
+
+.price {
+  color: grey;
+  font-size: 22px; }
+
+.produkter button {
+  outline: 0;
+  padding: 12px;
+  color: black;
+  background-color: white;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px; }
+
+.produkter button:hover {
+  opacity: 0.7; }
+
+@media screen and (min-width: 501px) and (max-width: 800px) {
+  .produkter {
+    border: 1rem solid white;
+    padding: 2rem;
+    overflow: scroll; }
+  #produkrubrik {
+    font-size: 40px; }
+  #stilren {
+    background-color: #f1f1f1;
+    width: 15rem;
+    height: 30rem;
+    text-align: center;
+    line-height: 32px;
+    font-size: 18px;
+    font-family: 'Abel', sans-serif;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    grid-row-start: 2;
+    grid-column-start: 1; }
+  #jordnara {
+    background-color: #f1f1f1;
+    width: 15rem;
+    height: 30rem;
+    text-align: center;
+    line-height: 32px;
+    font-size: 18px;
+    font-family: 'Abel', sans-serif;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    grid-row-start: 2;
+    grid-column-start: 2; }
+  #havet {
+    background-color: #f1f1f1;
+    width: 15rem;
+    height: 30rem;
+    text-align: center;
+    line-height: 32px;
+    font-size: 18px;
+    font-family: 'Abel', sans-serif;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    grid-row-start: 3;
+    grid-column-start: 1; }
+  #studio {
+    background-color: #f1f1f1;
+    width: 15rem;
+    height: 30rem;
+    text-align: center;
+    line-height: 32px;
+    font-size: 18px;
+    font-family: 'Abel', sans-serif;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    grid-row-start: 3;
+    grid-column-start: 2; } }
+
+@media only screen and (max-width: 600px) {
+  .produkter {
+    display: grid;
+    justify-items: center;
+    border: 1rem solid white;
+    padding: 2rem; }
+  #produktrubrik {
+    font-size: 30px; }
+  #stilren {
+    width: 20rem;
+    height: 30rem;
+    font-size: 16px;
+    grid-row-start: 2;
+    grid-column-start: 1; }
+  #jordnara {
+    width: 20rem;
+    height: 30rem;
+    font-size: 16px;
+    grid-row-start: 3;
+    grid-column-start: 1; }
+  #havet {
+    width: 20rem;
+    height: 30rem;
+    font-size: 16px;
+    grid-row-start: 4;
+    grid-column-start: 1; }
+  #studio {
+    width: 20rem;
+    height: 30rem;
+    font-size: 16px;
+    grid-row-start: 5;
+    grid-column-start: 1; } }
+
+LÄGG IN FAKTURA KOD HÄR
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Abel', sans-serif; }
+
+h1 {
+  font-family: 'Staatliches', cursive; }
+
+h3 {
+  font-family: 'Staatliches', cursive; }
+
+.container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; }
+
+.btn {
+  margin: 0.5rem; }
+
+.fakta {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: -2.5rem; }
+
+ul {
+  list-style: none; }
+
+li {
+  list-style: none; }
+
+th {
+  background-color: #C5D9F1;
+  border: solid black; }
+
+.produkter td {
+  border: solid black; }
+
+.summa {
+  display: flex;
+  margin-left: -2.5rem; }
+
+.totalsumma {
+  display: flex; }
+
+.fakFooter {
+  margin-bottom: 1rem; }
+
+/* popup */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 15%;
+  right: 0px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+  margin: 1rem; }
+
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  width: 280px;
+  right: 0px;
+  margin: 1rem; }
+
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white; }
+
+.form-container input[type=text], .form-container input[type=password] {
+  width: 90%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1; }
+
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none; }
+
+.printpdf {
+  float: left;
+  border: 2px solid lightgray;
+  width: 20%;
+  padding: 10px;
+  background: #555;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  font-family: "Abel", sans-serif;
+  position: absolute;
+  top: 20px; }
