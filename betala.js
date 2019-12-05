@@ -1,3 +1,58 @@
+
+
+
+
+//lagra data in i ett objekt/lista
+
+
+const produkter = document.querySelectorAll('.add-to-cart');
+
+console.log(produkter)
+
+for (var i = 0; i <produkter.length; i++)
+{
+  produkter[i].addEventListener("click" , function(e){
+    console.log(e.target)
+    e.preventDefault()
+
+    //välja div 
+   const price = document.querySelector(".price").textContent
+   console.log(price)
+   localStorage.setItem('stilren', 3000) 
+   localStorage.setItem('jordnära', 8000) 
+   localStorage.setItem('havet', 10000) 
+   localStorage.setItem('mediapaketet', 15000) 
+
+   /* Loopa igenom alla */
+   
+   const local =localStorage.getItem("havet")
+   console.log(local)
+
+   var x= document.querySelector(".container").textContent
+   console.log(x)
+
+  const prisa=  document.querySelector(".produkter")
+  
+  prisa.innerHTML = ".price"
+   console.log(prisa)
+   //localStorage 
+   //setItems
+  })
+
+
+}
+
+/* loopa igenom .. 
+
+const prisa=  document.querySelector(".produkter")
+for (var i = 0; i < produkter.length; i++) {
+prisa.innerHTML = "3000"
+ console.log(prisa)
+}
+*/
+
+
+
 /* Popup */
 document.querySelector(".open-button").addEventListener("click", openForm)
 
