@@ -83,15 +83,22 @@ const produktFyra = {
   belopp: 0
 }
 
-let produkter = [productEtt, produktTvå, produktTre, produktFyra]
+let produkt = [productEtt, produktTvå, produktTre, produktFyra]
 
-document.querySelectorAll(".add-to-cart")
-
+let AddToCart = documet.querySelectorAll(".add-to-cart")
+console.log(AddToCart)
 function hamta(){
   for (let i = 0; i < produkter.length; i++)
-        
+        {
+          console.log(produkter)
+        }
 
 }
+AddToCart[0].addEventListener(click, function(){
+console.log("meddeland")
+} )
+
+
 
 
 
@@ -126,9 +133,9 @@ function loadEventListeners(){
     courses.addEventListener('click', produktInfo);
 
 function buyProduct(e){
-    if(e.target.classList.contains('add-to-cart'){
+    if(e.target.classList.contains('add-to-cart')
         // value
      const produkter = e.target.parentElement.parentElement;
         produktInfo(produkt);
     }
-}}
+}
