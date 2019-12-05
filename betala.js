@@ -1,9 +1,12 @@
 /* Popup */
+document.querySelector(".open-button").addEventListener("click", openForm)
 
 function openForm() {
     document.getElementById("myForm").style.display = "block";
   }
-  
+
+  document.querySelector(".closebtn").addEventListener("click", closeForm)
+ 
   function closeForm() {
     document.getElementById("myForm").style.display = "none";
   }
@@ -42,48 +45,7 @@ kundNummer.innerHTML = Math.floor(Math.random() * 10000)
 
 // Räkna produkter
 
-const produkEtt = {
-  beskrivning: "Skrivbord",
-  antal: 0,
-  enhet: 0,
-  apris: 0,
-  moms: 0,
-  momskr: 0,
-  belopp: 0
 
-}
-
-const produktTvå = {
-  beskrivning: "Bokhylla",
-  antal: 0,
-  enhet: 0,
-  apris: 0,
-  moms: 0,
-  momskr: 0,
-  belopp: 0
-}
-   
-const produktTre = {
-  beskrivning: "konferensbord",
-  antal: 0,
-  enhet: 0,
-  apris: 0,
-  moms: 0,
-  momskr: 0,
-  belopp: 0
-}
-
-const produktFyra = {
-  beskrivning: "whiteboard",
-  antal: 0,
-  enhet: 0,
-  apris: 0,
-  moms: 0,
-  momskr: 0,
-  belopp: 0
-}
-
-let produkt = [productEtt, produktTvå, produktTre, produktFyra]
 
 let AddToCart = documet.querySelectorAll(".add-to-cart")
 console.log(AddToCart)
@@ -133,9 +95,9 @@ function loadEventListeners(){
     courses.addEventListener('click', produktInfo);
 
 function buyProduct(e){
-    if(e.target.classList.contains('add-to-cart')
+    if(e.target.classList.contains('add-to-cart'))
         // value
-     const produkter = e.target.parentElement.parentElement;
+    { const produkter = e.target.parentElement.parentElement;
         produktInfo(produkt);
     }
-}
+  }}
