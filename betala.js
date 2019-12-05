@@ -18,12 +18,16 @@ for (var i = 0; i <produkter.length; i++)
     //välja div 
    const price = document.querySelector(".price").textContent
    console.log(price)
+   //ska göras onload på indexsidan.
    localStorage.setItem('stilren', 3000) 
    localStorage.setItem('jordnära', 8000) 
    localStorage.setItem('havet', 10000) 
    localStorage.setItem('mediapaketet', 15000) 
 
-   /* Loopa igenom alla */
+   /* Loopa igenom alla
+   
+
+   */
    
    const local =localStorage.getItem("havet")
    console.log(local)
