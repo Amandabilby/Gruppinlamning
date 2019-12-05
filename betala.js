@@ -75,6 +75,7 @@ function print() {
       pdf.save(filename);
   });
 }
+document.querySelector(".printpdf").addEventListener("click", print)
 
 /* Lägg till produkter i faktura */
 
