@@ -50,7 +50,7 @@ window.addEventListener("load", function(){
   
       // Product Price
       part = document.createElement("div");
-      part.innerHTML = "kr" + products[i]['price'];
+      part.innerHTML = products[i]['price'] + "kr exkl moms";
       part.classList.add("p-price"); 
       item.appendChild(part);
   
@@ -164,7 +164,28 @@ var cart = {
           total += subtotal;
           container.appendChild(item);
         }
-  
+
+        // FRI FRAKT
+        item = document.createElement("input");
+        item.innerHTML= "innerHTML";
+        item.value ="Fri frakt!";
+        item.classList.add("c-checkoutmoms");
+        container.appendChild(item);
+
+ // TOTALT BELOPP EXKL MOMS
+        item = document.createElement("input");
+        item.innerHTML= "innerHTML";
+        item.value ="Totalt belopp exkl. moms    " + total + " kr";
+        item.classList.add("c-checkoutmoms");
+        container.appendChild(item);
+
+// TOTALT BELOPP INKL MOMS
+item = document.createElement("input");
+item.innerHTML= "innerHTML";
+item.value ="Totalt belopp inkl. moms    " + total * 1.25 + " kr" ;
+item.classList.add("c-checkoutexmoms");
+container.appendChild(item);
+
         // EMPTY BUTTONS
         item = document.createElement("input");
         item.type = "button";
@@ -176,10 +197,11 @@ var cart = {
         // CHECKOUT BUTTONS
         item = document.createElement("input");
         item.type = "button";
-        item.value = "Betala - Totalt belopp: " + "kr" + total;
+        item.value = "Till betalning: "  + total * 1.25 + "kr inkl moms";
         item.addEventListener("click", cart.checkout);
         item.classList.add("c-checkout");
         container.appendChild(item);
+
       }
     },
   
