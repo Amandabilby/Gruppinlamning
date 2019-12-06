@@ -220,7 +220,7 @@ container.appendChild(item);
     reset : function(){
     // reset() : empty cart
   
-      if (confirm("Empty cart?")) {
+      if (confirm("Vill du verkligen tömma kundvagnen?")) {
         cart.data = {};
         cart.save();
         cart.list();
