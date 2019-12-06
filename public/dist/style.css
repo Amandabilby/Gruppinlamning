@@ -243,192 +243,121 @@ form.example::after {
     display: flex;
     flex-direction: row; } }
 
+/* [PAGE & WRAPPER] */
 #produktrubrik {
-  width: 100%;
-  height: 3rem;
+  margin: auto;
+  top: 20%;
   text-align: center;
-  color: gray;
-  font-size: 60px;
+  padding: 3rem;
   font-family: "Staatliches", cursive;
-  letter-spacing: 30px; }
+  letter-spacing: 10px;
+  color: #f0dae6;
+  font-size: 40px; }
 
-img {
-  max-width: 100%;
-  height: auto; }
+#cart-wrap {
+  display: flex;
+  margin: auto;
+  max-width: 1000px; }
 
-.produkter {
-  border: 1rem solid white;
-  padding: 2rem;
+#cart-products {
+  width: 70%; }
+
+#cart-list {
+  width: 30%; }
+
+#cart-products, #cart-list {
+  padding: 20px; }
+
+/* [PRODUCTS] */
+#cart-products {
   display: grid;
-  justify-content: center;
-  grid-row-gap: 3rem;
-  grid-column-gap: 0.5rem;
-  background-color: transparent; }
-  .produkter h2 {
-    letter-spacing: 5px;
-    font-display: uppercase; }
+  /*grid-template-columns: 50% 50%;*/
+  grid-gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); }
 
-#stilren {
-  padding: 2rem;
-  background-color: #f1f1f1;
-  width: 80%;
-  height: 45rem;
+.p-item {
+  padding: 30px;
+  border: 3px solid #f0dae6;
+  background: #e7e7e9; }
+
+.p-img {
+  display: block;
+  margin: 0 auto;
+  border: 3px solid #ffffff; }
+
+.p-name {
+  font-weight: bold;
+  font-size: 1.5rem;
   text-align: center;
-  line-height: 32px;
-  font-size: 28px;
-  font-family: 'Abel', sans-serif;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  grid-row-start: 2;
-  grid-column: 1;
-  border: 0.2rem solid #f0dae6;
-  overflow: scroll; }
+  margin: 5px; }
 
-#jordnara {
-  padding: 2rem;
-  background-color: #f1f1f1;
-  width: 80%;
-  height: 45rem;
-  text-align: center;
-  line-height: 32px;
-  font-size: 28px;
-  font-family: 'Abel', sans-serif;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  grid-row-start: 2;
-  grid-column: 2;
-  border: 0.2rem solid #f0dae6;
-  overflow: scroll; }
-
-#havet {
-  padding: 2rem;
-  background-color: #f1f1f1;
-  width: 80%;
-  height: 45rem;
-  text-align: center;
-  line-height: 32px;
-  font-size: 28px;
-  font-family: 'Abel', sans-serif;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  grid-row-start: 3;
-  grid-column-start: 1;
-  border: 0.2rem solid #f0dae6;
-  overflow: scroll; }
-
-#studio {
-  padding: 2rem;
-  background-color: #f1f1f1;
-  width: 80%;
-  height: 45rem;
-  text-align: center;
-  line-height: 32px;
-  font-size: 28px;
-  font-family: 'Abel', sans-serif;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  grid-row-start: 3;
-  grid-column-start: 2;
-  border: 0.2rem solid #f0dae6;
-  overflow: scroll; }
-
-.price {
-  color: grey;
-  font-size: 22px; }
-
-.produkter button {
-  outline: 0;
-  padding: 12px;
+.p-price {
   color: black;
-  background-color: white;
+  font-weight: bold;
   text-align: center;
-  cursor: pointer;
+  letter-spacing: 5px; }
+
+.p-desc {
+  color: #888;
+  font-size: 0.9em; }
+
+.p-add {
+  bottom: 0px;
+  background: #f0dae6;
+  border: none;
   width: 100%;
-  font-size: 18px; }
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 15px;
+  text-transform: uppercase;
+  font-family: "Staatliches", cursive;
+  font-size: 16px; }
 
-.produkter button:hover {
-  opacity: 0.7; }
+.p-add:hover {
+  opacity: 0.5; }
 
-@media screen and (min-width: 501px) and (max-width: 800px) {
-  .produkter {
-    border: 1rem solid white;
-    padding: 2rem;
-    overflow: scroll; }
-  #produkrubrik {
-    font-size: 40px; }
-  #stilren {
-    background-color: #f1f1f1;
-    width: 15rem;
-    height: 30rem;
-    text-align: center;
-    line-height: 32px;
-    font-size: 18px;
-    font-family: 'Abel', sans-serif;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    grid-row-start: 2;
-    grid-column-start: 1; }
-  #jordnara {
-    background-color: #f1f1f1;
-    width: 15rem;
-    height: 30rem;
-    text-align: center;
-    line-height: 32px;
-    font-size: 18px;
-    font-family: 'Abel', sans-serif;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    grid-row-start: 2;
-    grid-column-start: 2; }
-  #havet {
-    background-color: #f1f1f1;
-    width: 15rem;
-    height: 30rem;
-    text-align: center;
-    line-height: 32px;
-    font-size: 18px;
-    font-family: 'Abel', sans-serif;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    grid-row-start: 3;
-    grid-column-start: 1; }
-  #studio {
-    background-color: #f1f1f1;
-    width: 15rem;
-    height: 30rem;
-    text-align: center;
-    line-height: 32px;
-    font-size: 18px;
-    font-family: 'Abel', sans-serif;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    grid-row-start: 3;
-    grid-column-start: 2; } }
+/* [CART LIST] */
+#cart-list div.c-item:nth-child(odd) {
+  background: #e7e7e9; }
 
-@media only screen and (max-width: 600px) {
-  .produkter {
-    display: grid;
-    justify-items: center;
-    border: 1rem solid white;
-    padding: 2rem; }
-  #produktrubrik {
-    font-size: 30px; }
-  #stilren {
-    width: 20rem;
-    height: 30rem;
-    font-size: 16px;
-    grid-row-start: 2;
-    grid-column-start: 1; }
-  #jordnara {
-    width: 20rem;
-    height: 30rem;
-    font-size: 16px;
-    grid-row-start: 3;
-    grid-column-start: 1; }
-  #havet {
-    width: 20rem;
-    height: 30rem;
-    font-size: 16px;
-    grid-row-start: 4;
-    grid-column-start: 1; }
-  #studio {
-    width: 20rem;
-    height: 30rem;
-    font-size: 16px;
-    grid-row-start: 5;
-    grid-column-start: 1; } }
+.c-item {
+  padding: 10px;
+  margin-bottom: 10px; }
+
+.c-qty, .c-name {
+  display: inline-block; }
+
+.c-qty {
+  margin-right: 10px;
+  width: 30px; }
+
+.c-empty, .c-checkout {
+  border: none;
+  width: 100%;
+  padding: 10px; }
+
+.c-empty {
+  background: #f0dae6;
+  font-family: "Staatliches", cursive;
+  font-size: 16px;
+  padding: 15px; }
+
+.c-empty:hover {
+  opacity: 0.5; }
+
+.c-checkout {
+  background: #e7e7e9;
+  font-family: "Staatliches", cursive;
+  font-size: 16px;
+  padding: 15px; }
+
+.c-checkout:hover {
+  opacity: 0.5; }
+
+.cart-productss img {
+  width: 100%;
+  height: 45%; }
 
 LÄGG IN FAKTURA KOD HÄR
 body {
