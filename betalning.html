@@ -10,14 +10,76 @@
 </head>
 <body>
 
-
+<img id="logga" src="public/bilder/logga.png">
     <h1 id="betalningrubrik">Faktura</h3>
-        <input class ="printpdf" type="button" value="Skriv ut eller spara som PDF" />
+        <input type="button" id="pdfbtn" onclick="print()" value="Skriv ut eller spara som PDF" />
+
+       
+<!-- Ruta med uppgifter -->
+<button class="open-button">Uppgifter</button>
+
+<div class="mottagare">
+        <h3>mottagare</h3>
+        <p class="mottagare__p">Företagsnamn, Adress</p>
+    </div>
+            <div class="form-popup" id="myForm">
+              <form  class="form-container">
+                <h1>Uppgifter</h1>
+            
+                <label for="text"><b>Företagsnamn</b></label>
+                <input type="text" class="foretagsnamn" placeholder="Företagsnamn" name="Företagsnamn" required>
+            
+                <label for="psw"><b>Adress</b></label>
+                <input type="text" class="adress" placeholder="Adress" name="adress" required>
+
+                <label for="psw"><b>Referensnummer</b></label>
+                <input type="text" class="referens" placeholder="Referens" name="referens">
+            
+              
+               
+              </form>
+              <button type="button" class="closebtn">Stäng</button>
+              <button type="submit" class="btn" id="sbtn">Fyll i uppgifter</button>
+            </div>
+
+            <!-- Plusgironr m.m. uppgifter -->
+        <div class="fakta">
+                <ul class="fakta__konstanter">
+                    <li>Fakturanummer</li>
+                    <li>Kundnummer</li>
+                    <li>Er Referens</li>
+                    <li>Vår Referens</li>
+                    <li>Betalningsvillkor</li>
+                    <li>Fakturadatum</li>
+                    <li>Förfallodatum</li>
+                    <li>Dröjsmålsränta</li>
+                    <li>Plusgirnr</li>
+                    <li>Bankgironr</li>
+                </ul>
+         
+                 <ul class="fakta__variabler">
+                     <li class="fakturaNummer">1</li>
+                     <li class="kundNummer">2</li>
+                     <li class="erReferens">Var vänlig fyll i ref. nummer</li>
+                     <li class="vårReferens">Kontex Kontorsindex</li>
+                     <li class="betalningsVilkår">30 dagar</li>
+                     <li class="fakturaDatum">25</li>
+                     <li class="förfalloDatum">27</li>
+                     <li class="dröjsmålsränta">5%</li>
+                     <li class="plusgiroNummer">19922-2233</li>
+                     <li class="bankgiroNummer">3123-3030</li>
+                 </ul>
+             </div>
+
 
         <div id="cart-wrap">
                 <div class="cart-productss" id="cart-products"></div>
                 <div id="cart-list"> </div>
               </div>
+
+              
+
+
 
   <style>
 
@@ -25,18 +87,43 @@
 font-family: 'Abel', sans-serif;
 margin: 5%;
 }
-.printpdf {
-    border: 2px solid lightgray;
-    width: 200px;
-    padding: 10px;
-    background: #e7e7e9;
-    color: black;
-    font-size: 14px;
-    cursor: pointer;
-    font-family: $font-fam;
 
-    
-  }
+h3{
+    font-family: 'Staatliches', cursive;
+}
+
+#logga {
+    position: absolute;
+    top: 10%;
+    left: 60%;
+}
+
+.fakta{
+    display:flex;
+    justify-content: flex-start;
+    margin-left: -2.5rem;
+}
+
+.fakta__konstanter {
+    font-weight: bold;
+}
+ul{
+    list-style: none;
+}
+li{
+    list-style:none;
+}
+
+#pdfbtn {
+
+  font-size: 16px;
+  padding: 10px;
+  background: #fff;
+  border: 1px solid black;
+  font-family: 'Abel', sans-serif;
+
+}
+
 #betalningrubrik {
     position: relative;
 
@@ -53,7 +140,7 @@ margin: 5%;
   display: grid;
 
 }
-#cart-list div.c-item:nth-child(odd) {
+#cart-list  {
   background: #fff;
 
 }
@@ -100,25 +187,55 @@ margin: 5%;
   border: none;
 
 }
+/* popup */
+
+.form-popup {
+    display: none;
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+    margin:1rem;
+  }
+
+  .open-button {
+    background-color:#555;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    
+    margin:1rem;
+  }
+
+  .form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+  }
+
+  .form-container input[type=text], .form-container input[type=text] {
+    width:90%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+  }
+
+  .form-container input[type=text]:focus, .form-container input[type=text]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
               </style>
 
               <script>
 
   // PDF-print knapp
 
-  function print() {
-    const filename  = 'ThisIsYourPDFFilename.pdf';
-
-    html2canvas(document.querySelector('faktura')).then(canvas => {
-        let pdf = new jsPDF('p', 'mm', 'a4');
-        pdf.addImage(canvas.toDataURL('image/png'), 'PNG', 0, 0, 211, 298);
-        pdf.save(filename);
-    });
-}
-
-
-
-document.querySelector(".printpdf").addEventListener("click", print)
+  
                   var products = {
     1 : {
       name : "Stilren",
@@ -229,7 +346,7 @@ var cart = {
   
           // A pris
           part = document.createElement("span");
-          part.innerHTML = product['name']+[' '] +product['price'] +[' kr/a pris exkl moms']+[' '] + product['price'] * 1.25+[' a pris inkl moms'];
+          part.innerHTML = product['name']+[' '] +product['price'] +[' kr/a pris exkl moms']+[' , '] + product['price'] * 1.25+['kr/a pris inkl moms'];
           part.classList.add("c-name");
           item.appendChild(part);
   
@@ -260,7 +377,7 @@ var cart = {
 // TOTALT BELOPP INKL MOMS
 item = document.createElement("input");
 item.innerHTML= "innerHTML";
-item.value ="Total moms    " + total * 0.25 + " kr" ;
+item.value ="Total moms 25%    " + total * 0.25 + " kr" ;
 item.classList.add("c-checkoutexmoms");
 container.appendChild(item);
 
@@ -311,6 +428,53 @@ container.appendChild(item);
     cart.load();
     cart.list();
   });
+
+  document.querySelector(".open-button").addEventListener("click", openForm)
+
+function openForm() {
+    document.getElementById("myForm").style.display = "block";
+  }
+
+  document.querySelector(".closebtn").addEventListener("click", closeForm)
+ 
+  function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+  }
+
+ function customerData(e){
+     e.preventDefault();
+const foretagsnamn = document.querySelector(".foretagsnamn").value;
+const adress = document.querySelector(".adress").value;
+const referens = document.querySelector(".referens").value;
+
+
+const textArea = document.querySelector(".mottagare__p");
+const ref  = document.querySelector(".erReferens")
+ref.textContent = referens;
+textArea.innerHTML =  "<li> "+ foretagsnamn +" </li>" + "<li>"+ adress + " </li>"
+};
+
+document.getElementById("sbtn").addEventListener("click", customerData);
+
+
+
+//datum och random
+
+const fakturaDatum = document.querySelector(".fakturaDatum")
+let d = new Date()
+
+fakturaDatum.innerHTML = d.toDateString()
+
+const förfalloDatum = document.querySelector(".förfalloDatum")
+förfalloDatum.innerHTML = new Date(Date.now()+ (30 * 24 * 60 * 60 * 1000))
+
+const fakturaNummer = document.querySelector(".fakturaNummer")
+fakturaNummer.innerHTML = Math.floor(Math.random() * 100000);
+
+const kundNummer = document.querySelector(".kundNummer")
+kundNummer.innerHTML = Math.floor(Math.random() * 10000)
+
+
 
 
               </script>
