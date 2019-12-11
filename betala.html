@@ -1,92 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Staatliches&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Abel&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Staatliches&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <title>Kontex Kontorsmaterial</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="public/dist/style.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="public/dist/style.css" />
     <script src="betala.js" defer></script>
+  </head>
+  <body>
+    <img id="logga" src="public/bilder/logga.png" />
+    <h1 id="betalningrubrik">Faktura</h1>
+    <input
+      type="button"
+      id="pdfbtn"
+      onclick="print()"
+      value="Skriv ut eller spara som PDF"
+    />
 
-    
-</head>
-<body>
+    <!-- Ruta med uppgifter -->
+    <button class="open-button">Uppgifter</button>
 
+    <div class="mottagare">
+      <h3>mottagare</h3>
+      <p class="mottagare__p">Företagsnamn, Adress</p>
+    </div>
+    <div class="form-popup" id="myForm">
+      <form class="form-container">
+        <h1>Uppgifter</h1>
 
-<img id="logga" src="public/bilder/logga.png">
-<h1 id="betalningrubrik">Faktura</h3>
-    <input type="button" id="pdfbtn" onclick="print()" value="Skriv ut eller spara som PDF" />
+        <label for="text"><b>Företagsnamn</b></label>
+        <input
+          type="text"
+          class="foretagsnamn"
+          placeholder="Företagsnamn"
+          name="Företagsnamn"
+          required
+        />
 
-   
-<!-- Ruta med uppgifter -->
-<button class="open-button">Uppgifter</button>
+        <label for="psw"><b>Adress</b></label>
+        <input
+          type="text"
+          class="adress"
+          placeholder="Adress"
+          name="adress"
+          required
+        />
 
-<div class="mottagare">
-    <h3>mottagare</h3>
-    <p class="mottagare__p">Företagsnamn, Adress</p>
-</div>
-        <div class="form-popup" id="myForm">
-          <form  class="form-container">
-            <h1>Uppgifter</h1>
-        
-            <label for="text"><b>Företagsnamn</b></label>
-            <input type="text" class="foretagsnamn" placeholder="Företagsnamn" name="Företagsnamn" required>
-        
-            <label for="psw"><b>Adress</b></label>
-            <input type="text" class="adress" placeholder="Adress" name="adress" required>
+        <label for="psw"><b>Referens</b></label>
+        <input
+          type="text"
+          class="referens"
+          placeholder="Referens"
+          name="referens"
+        />
+      </form>
+      <button type="button" class="closebtn">Stäng</button>
+      <button type="submit" class="btn" id="sbtn">Fyll i uppgifter</button>
+    </div>
 
-            <label for="psw"><b>Referens</b></label>
-            <input type="text" class="referens" placeholder="Referens" name="referens">
-        
-          
-           
-          </form>
-          <button type="button" class="closebtn">Stäng</button>
-          <button type="submit" class="btn" id="sbtn">Fyll i uppgifter</button>
-        </div>
-
-        <!-- Plusgironr m.m. uppgifter -->
+    <!-- Plusgironr m.m. uppgifter -->
     <div class="fakta">
-            <ul class="fakta__konstanter">
-                <li>Fakturanummer</li>
-                <li>Kundnummer</li>
-                <li>Er Referens</li>
-                <li>Vår Referens</li>
-                <li>Betalningsvillkor</li>
-                <li>Fakturadatum</li>
-                <li>Förfallodatum</li>
-                <li>Dröjsmålsränta</li>
-                <li>Plusgirnr</li>
-                <li>Bankgironr</li>
-            </ul>
-     
-             <ul class="fakta__variabler">
-                 <li class="fakturaNummer">1</li>
-                 <li class="kundNummer">2</li>
-                 <li class="erReferens">Var vänlig fyll i er referens</li>
-                 <li class="vårReferens">Kontex Kontorsindex</li>
-                 <li class="betalningsVilkår">30 dagar</li>
-                 <li class="fakturaDatum">25</li>
-                 <li class="förfalloDatum">27</li>
-                 <li class="dröjsmålsränta">5%</li>
-                 <li class="plusgiroNummer">19922-2233</li>
-                 <li class="bankgiroNummer">3123-3030</li>
-             </ul>
-         </div>
+      <ul class="fakta__konstanter">
+        <li>Fakturanummer</li>
+        <li>Kundnummer</li>
+        <li>Er Referens</li>
+        <li>Vår Referens</li>
+        <li>Betalningsvillkor</li>
+        <li>Fakturadatum</li>
+        <li>Förfallodatum</li>
+        <li>Dröjsmålsränta</li>
+        <li>Plusgirnr</li>
+        <li>Bankgironr</li>
+      </ul>
 
+      <ul class="fakta__variabler">
+        <li class="fakturaNummer">1</li>
+        <li class="kundNummer">2</li>
+        <li class="erReferens">Var vänlig fyll i er referens</li>
+        <li class="vårReferens">Kontex Kontorsindex</li>
+        <li class="betalningsVilkår">30 dagar</li>
+        <li class="fakturaDatum">25</li>
+        <li class="förfalloDatum">27</li>
+        <li class="dröjsmålsränta">5%</li>
+        <li class="plusgiroNummer">19922-2233</li>
+        <li class="bankgiroNummer">3123-3030</li>
+      </ul>
+    </div>
 
     <div id="cart-wrap">
-            <div class="cart-productss" id="cart-products"></div>
-            <div id="cart-list"> </div>
-          </div>
-
-          
-
-
-</body>
+      <div class="cart-productss" id="cart-products"></div>
+      <div id="cart-list"></div>
+    </div>
+  </body>
 </html>
