@@ -16,217 +16,77 @@
     
 </head>
 <body>
-<div class="container">
-    <!-- tjo -->
+
+
+<img id="logga" src="public/bilder/logga.png">
+<h1 id="betalningrubrik">Faktura</h3>
+    <input type="button" id="pdfbtn" onclick="print()" value="Skriv ut eller spara som PDF" />
+
    
-<!-- Logga och navbar -->
+<!-- Ruta med uppgifter -->
+<button class="open-button">Uppgifter</button>
 
-<div class="header">
-    <a href="index.html"><img src="public/bilder/logga.png" alt="logga"></a>
-     <!-- Sökknapp -->
-     <form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
-        <input type="text" placeholder="Sök..." name="search2">
-        <button type="submit"><i class="fa fa-search"></i></button>
-      </form>
-
-
-<div class="navbar">
-    <li><a href="index.html">Hem</a></li>
-    <li><a href="produktsida.html">Produkter</a></li>
-    <li><a href="betala.html">Betala</a></li>
+<div class="mottagare">
+    <h3>mottagare</h3>
+    <p class="mottagare__p">Företagsnamn, Adress</p>
 </div>
+        <div class="form-popup" id="myForm">
+          <form  class="form-container">
+            <h1>Uppgifter</h1>
+        
+            <label for="text"><b>Företagsnamn</b></label>
+            <input type="text" class="foretagsnamn" placeholder="Företagsnamn" name="Företagsnamn" required>
+        
+            <label for="psw"><b>Adress</b></label>
+            <input type="text" class="adress" placeholder="Adress" name="adress" required>
 
-</div>
+            <label for="psw"><b>Referens</b></label>
+            <input type="text" class="referens" placeholder="Referens" name="referens">
+        
+          
+           
+          </form>
+          <button type="button" class="closebtn">Stäng</button>
+          <button type="submit" class="btn" id="sbtn">Fyll i uppgifter</button>
+        </div>
 
-<div class="fakturaruta">
-    <div class="container">
-        <!-- Skriv ut eller spara som PFD-knapp -->
-            <input class ="printpdf" type="button" value="Skriv ut eller spara som PDF" />
-
-
-
-            <button class="open-button">Uppgifter</button>
-
-            <div class="form-popup" id="myForm">
-              <form  class="form-container">
-                <h1>Uppgifter</h1>
-            
-                <label for="text"><b>Företagsnamn</b></label>
-                <input type="text" class="foretagsnamn" placeholder="Företagsnamn" name="Företagsnamn" required>
-            
-                <label for="psw"><b>Adress</b></label>
-                <input type="text" class="adress" placeholder="Adress" name="adress" required>
-
-                <label for="psw"><b>Referens</b></label>
-                <input type="text" class="referens" placeholder="Referens" name="referens">
-            
-              
-               
-              </form>
-              <button type="button" class="closebtn">Stäng</button>
-              <button type="submit" class="btn" id="sbtn">Submit</button>
-            </div>
-
-
-    <div class="huvud">
-        <h1 class="firma">Kontex</h1>
-        <p>storgatan 1 13145 stockholm</p>
-        <h1 class="fakura">Faktura</h1>
-    </div>
-
-    <div class="mottagare">
-        <h3>mottagare</h3>
-        <p class="mottagare__p">något något</p>
-    </div>
-    
+        <!-- Plusgironr m.m. uppgifter -->
     <div class="fakta">
-       <ul class="fakta__konstanter">
-           <li>Fakturanummer</li>
-           <li>Kundnummer</li>
-           <li>Er Referens</li>
-           <li>Vår Referens</li>
-           <li>Betalningsvillkor</li>
-           <li>Fakturadatum</li>
-           <li>Förfallodatum</li>
-           <li>Dröjsmålsränta</li>
-           <li>Plusgirnr</li>
-           <li>Bankgironr</li>
-       </ul>
+            <ul class="fakta__konstanter">
+                <li>Fakturanummer</li>
+                <li>Kundnummer</li>
+                <li>Er Referens</li>
+                <li>Vår Referens</li>
+                <li>Betalningsvillkor</li>
+                <li>Fakturadatum</li>
+                <li>Förfallodatum</li>
+                <li>Dröjsmålsränta</li>
+                <li>Plusgirnr</li>
+                <li>Bankgironr</li>
+            </ul>
+     
+             <ul class="fakta__variabler">
+                 <li class="fakturaNummer">1</li>
+                 <li class="kundNummer">2</li>
+                 <li class="erReferens">Var vänlig fyll i er referens</li>
+                 <li class="vårReferens">Kontex Kontorsindex</li>
+                 <li class="betalningsVilkår">30 dagar</li>
+                 <li class="fakturaDatum">25</li>
+                 <li class="förfalloDatum">27</li>
+                 <li class="dröjsmålsränta">5%</li>
+                 <li class="plusgiroNummer">19922-2233</li>
+                 <li class="bankgiroNummer">3123-3030</li>
+             </ul>
+         </div>
 
-        <ul class="fakta__variabler">
-            <li class="fakturaNummer">1</li>
-            <li class="kundNummer">2</li>
-            <li class="erReferens">nils</li>
-            <li class="vårReferens">ingvar</li>
-            <li class="betalningsVilkår">w00t</li>
-            <li class="fakturaDatum">25</li>
-            <li class="förfalloDatum">27</li>
-            <li class="dröjsmålsränta">5%</li>
-            <li class="plusgiroNummer">1992-22</li>
-            <li class="bankgiroNummer">3123321-4</li>
-        </ul>
-    </div>
-    <div class="produkter">
-            <div class="beskrivningar">
-              <span>Beskrivning</span>
-              <span>Antal</span> 
-              <span>Enhet</span>
-              <span>á pris</span>
-              <span>Moms</span>
-              <span>Moms kr</span>
-              <span>Belopp</span>
-            </div>
-            <div class="produkter__">
-              <span class="produkter__beskrivning">pryl</span>
-              <span class="produkter__antal">1</span>
-              <span class="produkter__enhet">50</span>
-              <span class="produkter__apris"></span>
-              <span class="produkter__moms"></span>
-              <span class="produkter__momsKr"></span>
-              <span class="produkter__belopp"></span>
-            </div>
 
-        </div>
-
-          <div class="summa">
-              <ul>
-                  <li>Belopp före moms</li>
-                  <li>Total moms</li>
-                  <li>Öresutgämning</li>
-              </ul>
-              <ul>
-                  <li class="summa_bfm">89</li>
-                  <li class="totalMoms">6</li>
-                  <li class="oresugamning">2500</li>
-              </ul>
-          </div>
-          <div class="totalsumma">
-              <h3>Summa att betala</h3>
-              <h3 class="totalsumma__summa"> 2500</h3>
+    <div id="cart-wrap">
+            <div class="cart-productss" id="cart-products"></div>
+            <div id="cart-list"> </div>
           </div>
 
+          
 
 
-          <div class="fakFooter">
-              <table>
-                  <tr>
-                      <th>Kontex AB</th>
-                      <th>kontaktuppgifter</th>
-                      <th>Betalningsuppgifter</th>
-                  </tr>
-                  <tr>
-                      <td>storgatan 1</td>
-                      <td>Matthias Johansson</td>
-                      <td>Plusgiro   1234556-8</td>
-                  </tr>
-                  <tr>
-                        <td>123 45 Exempelstad</td>
-                        <td>tel: 012-3455677</td>
-                        <td>Bankgiro 123-4567</td>
-                    </tr>
-                    <tr>
-                            <td>Org.nr. 12391-3213</td>
-                            <td>Epost: mdksakm@gmail.com</td>
-                            <td>IBAN SE1234455690</td>
-                        </tr>
-                        <tr>
-                                <td>Moms reg. nr SE928310312</td>
-                                <td>www.exempel.se</td>
-                                <td></td>
-                            </tr>
-
-              </table>
-          </div>
-
-        </div>
- 
-    
-
-    
-</div>
-
-
-<footer class="footer">
-    <span>
-<br>
-<img class ="logga" src="public/bilder/logga.png" alt="logga">
-<br><br>
-<div class="copy">
-&copy; Kontex kontorsmaterial AB 
-</div>
-</span> 
-
-
-   <span id="kontex">
-<h4>Kontex</h4>
-
-    Kontex Kontorsmaterial<br>
-    Tulegatan 41<br>
-     113 53 Stockholm
-    
-</span>
-
-<div id="kundtjanst">
-<h4>Kundtjänst</h4>
-
-<i class="far fa-envelope"></i><a id="länk" href="mailto:"> Kontakta oss</a><br>
-<i class="fas fa-phone"></i><a id="länk" href="tel:"> Ring oss</a><br>
-</div>
-
-<div id="foljoss">
-<h4>Följ oss</h4>
-<i class="fab fa-instagram"></i><a id="länk" href="insta"> Instagram</a><br>
-<i class="fab fa-facebook-f"></i> <a id="länk" href="fb"> Facebook</a><br>
-<i class="fab fa-linkedin"></i><a id="länk" href="linkedin"> LinkedIn</a><br>
-</div>
-
-<span id="betalning">
-<h4>Betalningsmetoder</h4>
-
-    Klarna <br>
-    Kortbetlaning 
-</span>
-</footer>
-</div>
 </body>
 </html>
