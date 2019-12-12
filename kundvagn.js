@@ -254,3 +254,4 @@ window.addEventListener("load", function() {
 });
 
 // LÄNK TILL HJÄLP https://code-boxx.com/simple-vanilla-javascript-shopping-cart/
+

@@ -65,7 +65,7 @@ body {
     text-align: center; } }
 
 .bannerbild {
-  height: 35rem;
+  height: 30rem;
   border: 1rem solid white;
   background: url("../bilder/banner.jpg");
   /* background-image: cover; */
@@ -255,21 +255,14 @@ form.example::after {
   font-size: 40px; }
 
 #cart-wrap {
-  display: flex;
   margin: auto;
-  max-width: 1000px; }
-
-@media screen and (max-width: 600px) {
-  #cart-wrap {
-    display: grid;
-    grid-gap: 30px;
-    grid-auto-rows: 1; } }
+  overflow: none; }
 
 #cart-products {
   width: 70%; }
 
 #cart-list {
-  width: 30%; }
+  width: 22%; }
 
 #cart-products, #cart-list {
   padding: 20px; }
@@ -280,6 +273,13 @@ form.example::after {
   /*grid-template-columns: 50% 50%;*/
   grid-gap: 30px;
   grid-template-columns: 50% 50%; }
+
+@media screen and (max-width: 750px) {
+  #cart-products {
+    display: grid;
+    /*grid-template-columns: 50% 50%;*/
+    grid-gap: 30px;
+    grid-template-columns: 70%; } }
 
 .p-item {
   padding: 30px;
@@ -328,17 +328,56 @@ form.example::after {
   box-shadow: 5px 40px -10px rgba(0, 0, 0, 0.57);
   transition: all 0.4s ease 0s; }
 
-/* [CART LIST] */
+/* Kundvagn */
 #cart-list {
   background: #e7e7e9;
-  height: 50%;
-  border: 1px solid #f0dae6;
-  position: relative;
-  top: 50px;
+  height: 60%;
+  border: 2px solid #f0dae6;
+  position: absolute;
+  top: 60%;
+  left: 72%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); }
 
+@media screen and (max-width: 768px) {
+  #cart-list {
+    position: absolute;
+    top: 60%;
+    left: 55%;
+    width: 35%; }
+  .c-item {
+    padding: 1px;
+    margin-bottom: 1px;
+    width: 60%; }
+  .c-qty, c-name {
+    padding: 1px;
+    margin-bottom: 1px; }
+  .c-checkoutmoms {
+    background: none;
+    width: 60%; }
+  .c-checkoutexmoms {
+    background: none;
+    width: 35%;
+    font-size: 8px; }
+  .c-empty, .c-checkout {
+    border: none;
+    padding: 2px;
+    width: 80%; } }
+
+@media screen and (max-width: 1000px) {
+  .c-item {
+    width: 60%; }
+  .c-checkoutmoms {
+    width: 60%; }
+  .c-checkoutexmoms {
+    width: 60%; }
+  .c-empty, .c-checkout {
+    border: none;
+    padding: 2px;
+    width: 75%; } }
+
 .c-item {
+  background: #fff;
   padding: 10px;
   margin-bottom: 10px; }
 
@@ -409,7 +448,7 @@ body {
 h3 {
   font-family: 'Staatliches', cursive; }
 
-#logga {
+#loggafaktura {
   position: absolute;
   top: 10%;
   left: 60%; }
@@ -429,33 +468,37 @@ li {
   list-style: none; }
 
 #pdfbtn {
-  font-size: 16px;
-  padding: 10px;
-  background: #fff;
-  border: 1px solid black;
-  font-family: 'Abel', sans-serif; }
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8; }
+
+#pdfbtn:hover {
+  opacity: 0.6; }
 
 #betalningrubrik {
   position: relative;
   font-family: 'Staatliches', cursive; }
 
-/* #cart-list {
-                      background: #e7e7e9;
-                      height: 50%;
-                      width: 80%;
-                      border: 10px solid #e7e7e9;
-                      position: relative;
-                      top: 50px;
-                      display: grid;
-                    */
-.c-item {
+#cart-listfaktura {
+  background: #fff;
+  height: 50%;
+  width: 80%;
+  border: 10px solid #e7e7e9;
+  position: relative;
+  top: 50px;
+  display: grid; }
+
+.c-itemfaktura {
   padding: 10px;
   margin-bottom: 10px; }
 
-.c-qty, .c-name {
+.c-qtyfaktura, .c-name {
   display: inline-block; }
 
-.c-qty {
+.c-qtyfaktura {
   margin-right: 10px;
   width: 2rem;
   font-size: 12px;
@@ -463,13 +506,13 @@ li {
   background: #e7e7e9;
   border: 1px solid black; }
 
-.c-checkout {
+.c-checkoutfaktura {
   background: #fff;
-  font-family: "Staatliches", cursive;
+  font-display: uppercase;
   font-size: 16px;
   padding: 15px; }
 
-.c-checkoutmoms {
+.c-checkoutmomsfaktura {
   font-family: "Abel", sans-serif;
   background: #fff;
   font-size: 12px;
@@ -477,10 +520,11 @@ li {
   background: #e7e7e9;
   border: none; }
 
-.c-checkoutexmoms {
+.c-checkoutexmomsfaktura {
   font-family: "Abel", sans-serif;
   background: #fff;
-  font-size: 12px;
+  font-size: 16px;
+  font-weight: bold;
   padding: 15px;
   background: #e7e7e9;
   border: none; }
@@ -521,6 +565,9 @@ li {
   opacity: 0.8;
   margin: 1rem; }
 
+.open-button:hover {
+  opacity: 0.6; }
+
 .form-container {
   max-width: 300px;
   padding: 10px;
@@ -536,3 +583,28 @@ li {
 .form-container input[type=text]:focus, .form-container input[type=text]:focus {
   background-color: #ddd;
   outline: none; }
+
+.fakturafooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 80%; }
+
+hr {
+  float: left; }
+
+@media screen and (max-width: 600px) {
+  #cart-listfaktura {
+    font-size: 12px; }
+  .c-checkoutfaktura {
+    font-size: 12px; }
+  .c-checkoutmomsfaktura {
+    font-size: 14px; }
+  .c-checkoutexmomsfaktura {
+    font-size: 14px; }
+  #loggafaktura {
+    position: absolute;
+    top: 5%;
+    left: 60%;
+    width: 100px;
+    height: 50px; } }

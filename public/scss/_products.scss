@@ -15,21 +15,13 @@ font-size: 40px;
 }
 
 #cart-wrap { 
-  display: flex; 
   margin: auto;
-  max-width: 1000px;
+  overflow: none;
   
 }
 
- @media screen and (max-width: 600px) {
- #cart-wrap {
-display: grid;
-grid-gap: 30px;
-grid-auto-rows: 1; }
-}
-
 #cart-products { width: 70% }
-#cart-list { width: 30% }
+#cart-list { width: 22% }
 #cart-products, #cart-list { padding: 20px }
 
 /* Products */
@@ -39,6 +31,19 @@ grid-auto-rows: 1; }
   grid-gap: 30px;
   grid-template-columns: 50% 50%;
 }
+@media screen and (max-width: 750px) {
+
+  #cart-wrap {}
+  #cart-products {
+    display: grid;
+    /*grid-template-columns: 50% 50%;*/
+    grid-gap: 30px;
+    grid-template-columns: 70% ;
+  }
+}
+
+
+
 .p-item {
   padding: 30px;
   border: 3px solid #f0dae6;
@@ -90,27 +95,76 @@ font-size: 16px;
     box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
     transition: all 0.4s ease 0s;}
 
-/* [CART LIST] */
+/* Kundvagn */
 
 #cart-list {
-  background: #e7e7e9;
-  height: 50%;
-  border: 1px solid #f0dae6;
-  position: relative;
-  top: 50px;
+ background: #e7e7e9;
+  height: 60%;
+  border: 2px solid #f0dae6;
+  position: absolute;
+  top: 60%;
+  left: 72%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
 
 }
 
-@media screen and (max-width: 700px) {
-  
-
+@media screen and (max-width: 768px) {
+  #cart-list {
+  position: absolute;
+  top: 60%;
+  left: 55%;
+  width: 35%;
 }
+ .c-item {
+   padding: 1px;
+   margin-bottom: 1px;
+   width: 60%;
+ }
+ .c-qty, c-name {
+   padding: 1px;
+   margin-bottom: 1px;
+ }
+
+ .c-checkoutmoms {
+   background: none;
+   width: 60%;
+ }
+
+ .c-checkoutexmoms {
+  background: none;
+  width: 35%;
+  font-size: 8px;
+}
+.c-empty, .c-checkout {
+  border: none;
+  padding: 2px;
+  width: 80%;
+  
+}
+}
+
+@media screen and (max-width: 1000px) {
+  .c-item {
+    width: 60%;
+  }
+  .c-checkoutmoms{
+    width: 60%;
+  }
+
+  .c-checkoutexmoms{
+    width: 60%;
+  }
+  .c-empty, .c-checkout {
+    border: none;
+    padding: 2px;
+    width: 75%;
+}}
 
 #cart-list div.c-item:nth-child(odd) {
 }
 .c-item {
+  background: #fff;
   padding: 10px;
   margin-bottom: 10px;
 }
@@ -182,5 +236,5 @@ font-size: 16px;
   background: #e7e7e9;
   border: none;
   font-weight: bold;
-
 }
+

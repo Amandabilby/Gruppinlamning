@@ -76,7 +76,7 @@ var cart = {
   list: function() {
     // list() : update HTML
 
-    var container = document.getElementById("cart-list"),
+    var container = document.getElementById("cart-listfaktura"),
       item = null,
       part = null,
       product = null;
@@ -105,7 +105,7 @@ var cart = {
         subtotal = 0;
       for (var i in cart.data) {
         item = document.createElement("div");
-        item.classList.add("c-item");
+        item.classList.add("c-itemfaktura");
         product = cart.data[i];
 
         // Quantity
@@ -113,7 +113,7 @@ var cart = {
         part.type = "number";
         part.value = product["qty"];
         part.dataset.id = i;
-        part.classList.add("c-qty");
+        part.classList.add("c-qtyfaktura");
         item.appendChild(part);
 
         // A pris
@@ -139,7 +139,7 @@ var cart = {
       item = document.createElement("div");
       item.innerHTML = "Fri frakt! ";
       item.value = "Fri frakt!";
-      item.classList.add("c-checkoutmoms");
+      item.classList.add("c-checkoutmomsfaktura");
       container.appendChild(item);
 
       //
@@ -148,14 +148,14 @@ var cart = {
       item = document.createElement("input");
       item.innerHTML = "innerHTML";
       item.value = "Totalt belopp före moms    " + total + " kr";
-      item.classList.add("c-checkoutmoms");
+      item.classList.add("c-checkoutmomsfaktura");
       container.appendChild(item);
 
       // TOTALT BELOPP INKL MOMS
       item = document.createElement("input");
       item.innerHTML = "innerHTML";
       item.value = "Total moms 25%    " + total * 0.25 + " kr";
-      item.classList.add("c-checkoutexmoms");
+      item.classList.add("c-checkoutexmomsfaktura");
       container.appendChild(item);
 
       // CHECKOUT BUTTONS
@@ -163,7 +163,7 @@ var cart = {
       item.type = "innerHTML";
       item.value =
         "Summa att betala inklusive moms " + total * 1.25 + "kr inkl moms";
-      item.classList.add("c-checkout");
+      item.classList.add("c-checkoutfaktura");
       container.appendChild(item);
     }
   },
