@@ -33,16 +33,57 @@
         <a href="index.html"
           ><img src="public/bilder/logga.png" alt="logga"
         /></a>
-        <!-- Sökknapp -->
-        <form
-          class="example"
-          action="/action_page.php"
-          style="margin:auto;max-width:300px"
-        >
-          <input type="text" placeholder="Sök..." name="search2" />
-          <button type="submit"><i class="fa fa-search"></i></button>
-        </form>
 
+        <!-- Sökknapp -->
+        <div class="dropdown">
+          <button onclick="myFunction()" class="dropbtn">
+            <i class="fas fa-search"></i>
+          </button>
+          <div id="myDropdown" class="dropdown-content">
+            <input
+              type="text"
+              placeholder="Vad letar du efter?"
+              id="myInput"
+              onkeyup="filterFunction()"
+            />
+            <a class="search-content" href="#stilren"
+              ><img
+                src="public/bilder/Simpledesk.jpeg"
+                alt="Bild"
+              /><br />Stilren <b>3.000kr</b><br /><button class="search-btn">
+                Lägg till i kundvagnen
+              </button></a
+            >
+            <a class="search-content" href="#jordnära"
+              ><img
+                src="public/bilder/Earthtonesoffice.jpeg"
+                alt="Bild"
+              /><br />Jordnära <b>8.000kr</b><br /><button class="search-btn">
+                Lägg till i kundvagnen
+              </button></a
+            >
+            <a class="search-content" href="#havet"
+              ><img
+                src="public/bilder/coloroffice.jpeg"
+                alt="Bild"
+              /><br />Havet <b>10.000kr</b><br /><button class="search-btn">
+                Lägg till i kundvagnen
+              </button></a
+            >
+            <a class="search-content" href="#mediapaketet"
+              ><img
+                src="public/bilder/Productshots.jpeg"
+                alt="Bild"
+              /><br />Mediapaketet <b>15.000kr</b><br /><button
+                class="search-btn"
+              >
+                Lägg till i kundvagnen
+              </button></a
+            >
+          </div>
+        </div>
+
+        <!-- Nav bar -->
         <div class="navbar">
           <ul>
           <li><a href="index.html">Hem</a></li>
@@ -50,8 +91,6 @@
         </ul>
         </div>
       </div>
-
-      
 
       <!-- Produkter -->
 
@@ -62,52 +101,52 @@
         <div id="cart-list"></div>
       </div>
 
-    
-              <!-- Footer  -->
-              <footer class="footer">
-        
-                  <br />
-                  <img class="logga" src="public/bilder/logga.png" alt="logga" height="100" width="200" />
-                  <br /><br />
-                  <div class="copy">
-                    &copy; Kontex kontorsmaterial AB
-                  </div>
-                
-        
-                <div id="kontex">
-                  <h4>Kontex</h4>
-        
-                  Kontex Kontorsmaterial<br />
-                  Tulegatan 41<br />
-                  113 53 Stockholm
-                </div>
-        
-                <div id="kundtjanst">
-                  <h4>Kundtjänst</h4>
-        
-                  <i class="far fa-envelope"></i
-                  ><a id="länkfyra" href="mailto:"> Kontakta oss</a><br />
-                  <i class="fas fa-phone"></i><a id="länkfem" href="tel:"> Ring oss</a
-                  ><br />
-                </div>
-        
-                <div id="foljoss">
-                  <h4>Följ oss</h4>
-                  <i class="fab fa-instagram"></i
-                  ><a id="länksex" href="insta"> Instagram</a><br />
-                  <i class="fab fa-facebook-f"></i> <a id="länktvå" href="fb"> Facebook</a
-                  ><br />
-                  <i class="fab fa-linkedin"></i
-                  ><a id="länktre" href="linkedin"> LinkedIn</a><br />
-                </div>
-        
-                <div id="betalning">
-                  <h4>Betalningsmetoder</h4>
-        
-                  Klarna <br />
-                  Kortbetlaning
-                </div>
-              </footer>
+      <footer class="footer">
+        <span>
+          <br />
+          <img class="logga" src="public/bilder/logga.png" alt="logga" />
+          <br /><br />
+          <div class="copy">
+            &copy; Kontex kontorsmaterial AB
+          </div>
+        </span>
+
+        <!-- Footer  -->
+        <span id="kontex">
+          <h4>Kontex</h4>
+
+          Kontex Kontorsmaterial<br />
+          Tulegatan 41<br />
+          113 53 Stockholm
+        </span>
+
+        <div id="kundtjanst">
+          <h4>Kundtjänst</h4>
+
+          <i class="far fa-envelope"></i
+          ><a id="länk" href="mailto:"> Kontakta oss</a><br />
+          <i class="fas fa-phone"></i><a id="länk" href="tel:"> Ring oss</a
+          ><br />
+        </div>
+
+        <div id="foljoss">
+          <h4>Följ oss</h4>
+          <i class="fab fa-instagram"></i
+          ><a id="länk" href="insta"> Instagram</a><br />
+          <i class="fab fa-facebook-f"></i> <a id="länk" href="fb"> Facebook</a
+          ><br />
+          <i class="fab fa-linkedin"></i
+          ><a id="länk" href="linkedin"> LinkedIn</a><br />
+        </div>
+
+        <span id="betalning">
+          <h4>Betalningsmetoder</h4>
+
+          Klarna <br />
+          Kortbetlaning
+        </span>
+      </footer>
     </div>
+    <script src="search.js"></script>
   </body>
 </html>
