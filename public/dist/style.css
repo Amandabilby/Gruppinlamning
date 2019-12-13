@@ -157,10 +157,10 @@ body {
   .footer .copy {
     font-size: 12px;
     text-transform: uppercase; }
-  .footer #länk:visited {
+  .footer #länk:visited #länktvå:visited #länktre:visited {
     text-decoration: none;
     color: black; }
-  .footer #länk:link {
+  .footer #länk:link #länktvå:link #länktre:link {
     text-decoration: none;
     color: black; }
   .footer h4 {
