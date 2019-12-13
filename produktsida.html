@@ -34,59 +34,22 @@
           ><img src="public/bilder/logga.png" alt="logga"
         /></a>
         <!-- Sökknapp -->
-        <div class="dropdown">
-          <button onclick="myFunction()" class="dropbtn">
-            <i class="fas fa-search"></i>
-          </button>
-          <div id="myDropdown" class="dropdown-content">
-            <input
-              type="text"
-              placeholder="Vad letar du efter?"
-              id="myInput"
-              onkeyup="filterFunction()"
-            />
-            <a class="search-content" href="#stilren"
-              ><img
-                src="public/bilder/Simpledesk.jpeg"
-                alt="Bild"
-              /><br />Stilren <b>3.000kr</b><br /><button class="search-btn">
-                Lägg till i kundvagnen
-              </button></a
-            >
-            <a class="search-content" href="#jordnära"
-              ><img
-                src="public/bilder/Earthtonesoffice.jpeg"
-                alt="Bild"
-              /><br />Jordnära <b>8.000kr</b><br /><button class="search-btn">
-                Lägg till i kundvagnen
-              </button></a
-            >
-            <a class="search-content" href="#havet"
-              ><img
-                src="public/bilder/coloroffice.jpeg"
-                alt="Bild"
-              /><br />Havet <b>10.000kr</b><br /><button class="search-btn">
-                Lägg till i kundvagnen
-              </button></a
-            >
-            <a class="search-content" href="#mediapaketet"
-              ><img
-                src="public/bilder/Productshots.jpeg"
-                alt="Bild"
-              /><br />Mediapaketet <b>15.000kr</b><br /><button
-                class="search-btn"
-              >
-                Lägg till i kundvagnen
-              </button></a
-            >
-          </div>
-        </div>
-        <!-- Nav bar -->
+        <form
+          class="example"
+          action="/action_page.php"
+          style="margin:auto;max-width:300px"
+        >
+          <input type="text" placeholder="Sök..." name="search2" />
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+
         <div class="navbar">
           <li><a href="index.html">Hem</a></li>
           <li><a class="active" href="produktsida.html">Produkter</a></li>
         </div>
       </div>
+
+      
 
       <!-- Produkter -->
 
@@ -107,7 +70,7 @@
           </div>
         </span>
 
-        <!-- Footer  -->
+              <!-- Footer  -->
         <span id="kontex">
           <h4>Kontex</h4>
 
@@ -143,6 +106,5 @@
         </span>
       </footer>
     </div>
-    <script src="search.js"></script>
   </body>
 </html>
