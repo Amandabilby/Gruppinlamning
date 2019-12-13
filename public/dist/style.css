@@ -277,7 +277,7 @@ form.example::after {
   grid-gap: 30px;
   grid-template-columns: 50% 50%; }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 768px) {
   #cart-products {
     display: grid;
     grid-gap: 30px;
@@ -444,9 +444,9 @@ form.example::after {
   font-weight: bold; }
 
 /* Css till fakturaan */
-body {
+.containerfaktura {
   font-family: 'Abel', sans-serif;
-  margin: 5%; }
+  margin-left: 5%; }
 
 h3 {
   font-family: 'Staatliches', cursive; }
