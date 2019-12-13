@@ -1,4 +1,6 @@
 
+/* Css till produkter */
+
 #produktrubrik {
   margin: auto;
   top: 20%;
@@ -20,10 +22,8 @@ font-size: 40px;
 #cart-list { width: 22% }
 #cart-products, #cart-list { padding: 20px }
 
-/* Products */
 #cart-products {
   display: grid;
-  /*grid-template-columns: 50% 50%;*/
   grid-gap: 30px;
   grid-template-columns: 50% 50%;
 }
@@ -32,7 +32,6 @@ font-size: 40px;
   #cart-wrap {}
   #cart-products {
     display: grid;
-    /*grid-template-columns: 50% 50%;*/
     grid-gap: 30px;
     grid-template-columns: 70% ;
   }
