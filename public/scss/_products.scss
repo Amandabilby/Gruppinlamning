@@ -1,249 +1,235 @@
 
+/* Css till produkter */
+
 #produktrubrik {
-  width: 100%;
-  height: 3rem; 
+  margin: auto;
+  top: 20%;
   text-align: center;
-  color: gray;
-  font-size: 60px;
+  padding: 3rem;
   font-family: $font-famrubrik;
-  letter-spacing: 30px;
-
+letter-spacing: 10px;
+color: $light-pink;
+font-size: 40px;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+#cart-wrap { 
+  margin: auto;
+  overflow: none;
+  
 }
 
-.produkter {
-    border: 1rem solid white;
-    padding: 2rem;
+#cart-products { width: 70% }
+#cart-list { width: 22% }
+#cart-products, #cart-list { padding: 20px }
+
+#cart-products {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: 50% 50%;
+}
+@media screen and (max-width: 768px) {
+
+  #cart-wrap {}
+  #cart-products {
     display: grid;
-    justify-content: center;
-    grid-row-gap: 3rem;
-    grid-column-gap: 0.5rem;
-    background-color: transparent;
-
-    h2 {
-        letter-spacing: 5px;
-        font-display: uppercase;
-    }
-    
+    grid-gap: 30px;
+    grid-template-columns: 70% ;
   }
+}
+
+
+
+.p-item {
+  padding: 30px;
+  border: 3px solid #f0dae6;
+  background: #e7e7e9;
+}
+.p-img {
+  display: block;
+  margin: 0 auto;
+  border: 3px solid #ffffff;
+
+}
+.p-name {
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 5px;
   
-#stilren {
-    padding: 2rem;
-    background-color: #f1f1f1;
-    width: 80%;
-    height: 45rem;
-    text-align: center;
-    line-height: 32px;
-    font-size: 28px;
-    font-family: 'Abel', sans-serif; 
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    grid-row-start: 2;
-    grid-column: 1;
-    border: 0.2rem solid $light-pink;
-    overflow: scroll;
+}
+.p-price {
+  color: black;
+  font-weight: bold;
+  text-align: center;
+ letter-spacing: 5px;
+}
+.p-desc {
+  padding: 20px;
+  color: #888;
+  font-size: 0.9em;
+}
 
+.p-add {
+  background: #f0dae6;
+  border: none;
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 15px;
+  text-transform: uppercase;
+  font-family: $font-famrubrik;
+font-size: 16px;
+}
 
+.p-add:hover {
+  opacity: 0.7;
+    letter-spacing: 2px;
+    -webkit-box-shadow: 0px 5px 10px -10px rgba(0,0,0,0.57);
+    -moz-box-shadow: 0px 5px 10px -10px rgba(0,0,0,0.57);
+    box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+    transition: all 0.4s ease 0s;}
 
-  }
-  #jordnara {
-    padding: 2rem;
-    background-color: #f1f1f1;
-    width: 80%;
-    height: 45rem;
-    text-align: center;
-    line-height: 32px;
-    font-size: 28px;
-    font-family: 'Abel', sans-serif; 
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    grid-row-start: 2;
-    grid-column: 2;
-    border: 0.2rem solid $light-pink;
-    overflow: scroll;
+/* Kundvagn */
 
+#cart-list {
+ background: #e7e7e9;
+  height: 60%;
+  border: 2px solid #f0dae6;
+  position: absolute;
+  top: 60%;
+  left: 72%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
 
+}
 
-  }
+@media screen and (max-width: 768px) {
+  #cart-list {
+  position: absolute;
+  top: 60%;
+  left: 55%;
+  width: 35%;
+}
+ .c-item {
+   padding: 1px;
+   margin-bottom: 1px;
+   width: 60%;
+ }
+ .c-qty, c-name {
+   padding: 1px;
+   margin-bottom: 1px;
+ }
 
-  #havet {
-    padding: 2rem;
-    background-color: #f1f1f1;
-    width: 80%;
-    height: 45rem;
-    text-align: center;
-    line-height: 32px;
-    font-size: 28px;
-    font-family: 'Abel', sans-serif; 
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    grid-row-start: 3;
-    grid-column-start: 1;
-    border: 0.2rem solid $light-pink;
-    overflow: scroll;
+ .c-checkoutmoms {
+   background: none;
+   width: 60%;
+ }
 
-
-    
-
-  }
-
-  #studio {
-    padding: 2rem;
-    background-color: #f1f1f1;
-    width: 80%;
-    height: 45rem;
-    text-align: center;
-    line-height: 32px;
-    font-size: 28px;
-    font-family: 'Abel', sans-serif; 
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    grid-row-start: 3;
-    grid-column-start: 2;
-    border: 0.2rem solid $light-pink;
-    overflow: scroll;
-
-
-  }
+ .c-checkoutexmoms {
+  background: none;
+  width: 35%;
+  font-size: 8px;
+}
+.c-empty, .c-checkout {
+  border: none;
+  padding: 2px;
+  width: 80%;
   
-  .price {
-    color: grey;
-    font-size: 22px;
+}
+}
+
+@media screen and (max-width: 1000px) {
+  .c-item {
+    width: 60%;
   }
+  .c-checkoutmoms{
+    width: 60%;
+  }
+
+  .c-checkoutexmoms{
+    width: 60%;
+  }
+  .c-empty, .c-checkout {
+    border: none;
+    padding: 2px;
+    width: 75%;
+}}
+
+#cart-list div.c-item:nth-child(odd) {
+}
+.c-item {
+  background: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.c-qty, .c-name {
+  display: inline-block;
+}
+.c-qty {
+  margin-right: 10px;
+  width: 2rem;
+}
+.c-empty, .c-checkout {
+  border: none;
+  padding: 10px;
   
-  .produkter button {
-    outline: 0;
-    padding: 12px;
-    color: black;
-    background-color: white;
-    text-align: center;
-    cursor: pointer;
+}
+.c-empty {
+  background: #f0dae6;
+  font-family: $font-famrubrik;
+  font-size: 16px;
+  padding: 15px;
+
+}
+
+.c-empty:hover {
+  opacity: 0.7;
+  letter-spacing: 2px;
+  -webkit-box-shadow: 0px 5px 10px -10px rgba(0,0,0,0.57);
+  -moz-box-shadow: 0px 5px 10px -10px rgba(0,0,0,0.57);
+  box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+  transition: all 0.4s ease 0s;
+}
+.c-checkout {
+  background: #fff;
+  font-family: $font-famrubrik;
+  font-size: 16px;
+  padding: 15px;
+
+}
+
+.c-checkout:hover {
+  opacity: 0.7;
+  letter-spacing: 0.5px;
+  -webkit-box-shadow: 0px 5px 10px -10px rgba(0,0,0,0.57);
+  -moz-box-shadow: 0px 5px 10px -10px rgba(0,0,0,0.57);
+  box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+  transition: all 0.4s ease 0s;
+}
+
+.cart-productss img {
     width: 100%;
-    font-size: 18px;
-  }
-  
-  .produkter button:hover {
-    opacity: 0.7;
-  }
-  
-   @media screen and (min-width:501px) and (max-width: 800px) {
+    height: 43%;
+}
 
-    .produkter {
-        border: 1rem solid white;
-        padding: 2rem;
-        overflow: scroll;
+.c-checkoutmoms {
+  font-family: $font-fam;
+  background:none;
+  font-size: 12px;
+  padding: 15px;
+  background: #e7e7e9;
+  border: none;
 
-    }
-    #produkrubrik {
-        font-size: 40px;
-    }
-         
-       #stilren {
-           background-color: #f1f1f1;
-           width: 15rem;
-           height: 30rem;
-           text-align: center;
-           line-height: 32px;
-           font-size: 18px;
-           font-family: 'Abel', sans-serif; 
-           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-           grid-row-start: 2;
-           grid-column-start: 1;
-       
-         }
-         #jordnara {
-           background-color: #f1f1f1;
-           width: 15rem;
-           height: 30rem;
-           text-align: center;
-           line-height: 32px;
-           font-size: 18px;
-           font-family: 'Abel', sans-serif; 
-           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-           grid-row-start: 2;
-           grid-column-start: 2;
-       
-         }
-       
-         #havet {
-           background-color: #f1f1f1;
-           width: 15rem;
-           height: 30rem;
-           text-align: center;
-           line-height: 32px;
-           font-size: 18px;
-           font-family: 'Abel', sans-serif; 
-           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-           grid-row-start: 3;
-           grid-column-start: 1;
-           
-       
-         }
-       
-         #studio {
-           background-color: #f1f1f1;
-           width: 15rem;
-           height: 30rem;
-           text-align: center;
-           line-height: 32px;
-           font-size: 18px;
-           font-family: 'Abel', sans-serif; 
-           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-           grid-row-start: 3;
-           grid-column-start: 2;
-       
-         }
-       
-   
-   
-   }
- 
+}
 
+.c-checkoutexmoms {
+  font-family: $font-fam;
+  background: none;
+  font-size: 16px;
+  padding: 15px;
+  background: #e7e7e9;
+  border: none;
+  font-weight: bold;
+}
 
-@media only screen and (max-width: 600px) {
-    .produkter {
-        display: grid;
-        justify-items: center;
-            border: 1rem solid white;
-            padding: 2rem;
-        
-    }    
-    #produktrubrik {
-        font-size: 30px;    }
-         
-       #stilren {
-           width: 20rem;
-           height: 30rem;
-           font-size: 16px;
-           grid-row-start: 2;
-           grid-column-start: 1;
-       
-         }
-         #jordnara {
-            width: 20rem;
-            height: 30rem;
-            font-size: 16px;
-         grid-row-start: 3;
-           grid-column-start: 1;
-       
-         }
-       
-         #havet {
-            width: 20rem;
-            height: 30rem;
-            font-size: 16px;
-           grid-row-start: 4;
-           grid-column-start: 1;
-           
-       
-         }
-       
-         #studio {
-            width: 20rem;
-            height: 30rem;
-            font-size: 16px;
-           grid-row-start: 5;
-           grid-column-start: 1;
-         }
-
-        }

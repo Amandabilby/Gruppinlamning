@@ -1,126 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Staatliches&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Abel&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Staatliches&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <title>Kontex Kontorsmaterial</title>
     <!-- <link rel="stylesheet" href="style.css"> -->
-    <link rel="stylesheet" href="./public/dist/style.css">
-    
-</head>
-<body>
-<div class="container">
-    
-   
-<!-- Logga och navbar -->
+    <link rel="stylesheet" href="./public/dist/style.css" />
+    <script src="kundvagn.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Logga och navbar -->
 
-<div class="header">
-    <a href="index.html"><img src="public/bilder/logga.png" alt="logga"></a>
-     <!-- Sökknapp -->
-     <form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
-        <input type="text" placeholder="Sök..." name="search2">
-        <button type="submit"><i class="fa fa-search"></i></button>
-      </form>
+      <div class="header">
+        <a href="index.html"
+          ><img src="public/bilder/logga.png" alt="logga"
+        /></a>
+        <!-- Sökknapp -->
+        <form
+          class="example"
+          action="/action_page.php"
+          style="margin:auto;max-width:300px"
+        >
+          <input type="text" placeholder="Sök..." name="search2" />
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
 
-
-<div class="navbar">
-    <li><a href="index.html">Hem</a></li>
-    <li><a class="active" href="produktsida.html">Produkter</a></li>
-    <li><a href="betala.html">Betala</a></li>
-</div>
-
-</div>
-
-<h3 id="produktrubrik">Produkter</h3>
-
-<div class="produkter">
-                 <div id="stilren">
-                 <img src="public/bilder/Simpledesk.jpeg" alt="Simpledesk" width="400px" height="300px">
-                  <h2 id="cart-content">Stilren</h1>
-                  <p class="price">3.000kr ex moms</p>
-                  <p>För er som som vill ha en stilren, modern och enkel arbetsmiljö är detta paketet något för er. </p>
-                  <p><button href="#" class="add-to-cart">Lägg till i kundvagnen</button></p></div>
-
-          <div id="jordnara">
-                  <img src="public/bilder/Earthtonesoffice.jpeg" alt="Earthtonesoffice" width="400px" height="300px">
-                  <h2>Jordnära </h1>
-                  <p class="price">8.000kr ex moms</p>
-                  <p>Med det här paketet får man känslan av moder jord på kontoret, vilket leder till en stark och inspirerande arbetsmiljö.</p>
-                  <p><button href="#" class="add-to-cart">Lägg till i kundvagnen</button></p>
-                </div>
-          
-          <div id="havet">
-                   <img src="public/bilder/coloroffice.jpeg" alt="coloroffice" width="400px" height="300px">
-                  <h2>Havet</h1>
-                  <p class="price">10.000kr ex moms</p>
-                  <p>Paketet havet ger en lugn känsla men även en som stärker självförtroendet på arbetsplatsen.
-                  </p>
-                  <p><button href="#" class="add-to-cart">Lägg till i kundvagnen</button></p>
-                </div>
-                  
-                  
-          <div id="studio">
-                  <img src="public/bilder/Productshots.jpeg" alt="Productshots" width="400px" height="300px">
-                  <h2>Mediapaketet</h1>
-                  <p class="price">15.000kr ex moms </p>
-                  <p>I detta paket får du allting som behövs till det öppna medialandskapet. </p>
-                  <p><button href="#" class="add-to-cart">Lägg till i kundvagnen</button></p></div>  
-                  
-                  
-       
+        <div class="navbar">
+          <li><a href="index.html">Hem</a></li>
+          <li><a class="active" href="produktsida.html">Produkter</a></li>
         </div>
+      </div>
 
+      
 
+      <!-- Produkter -->
 
+      <h2 id="produktrubrik">Våra paket</h2>
+      <hr width="100%" />
+      <div id="cart-wrap">
+        <div class="cart-productss" id="cart-products"></div>
+        <div id="cart-list"></div>
+      </div>
 
-        <footer class="footer">
-                <span>
-        <br>
-        <img class ="logga" src="public/bilder/logga.png" alt="logga">
-        <br><br>
-        <div class="copy">
-        &copy; Kontex kontorsmaterial AB 
-        </div>
-        </span> 
-        
-        
-               <span id="kontex">
-        <h4>Kontex</h4>
-        
-                Kontex Kontorsmaterial<br>
-                Tulegatan 41<br>
-                 113 53 Stockholm
-                
+      <footer class="footer">
+        <span>
+          <br />
+          <img class="logga" src="public/bilder/logga.png" alt="logga" />
+          <br /><br />
+          <div class="copy">
+            &copy; Kontex kontorsmaterial AB
+          </div>
         </span>
-        
+
+              <!-- Footer  -->
+        <span id="kontex">
+          <h4>Kontex</h4>
+
+          Kontex Kontorsmaterial<br />
+          Tulegatan 41<br />
+          113 53 Stockholm
+        </span>
+
         <div id="kundtjanst">
-         <h4>Kundtjänst</h4>
-        
-         <i class="far fa-envelope"></i><a id="länk" href="mailto:"> Kontakta oss</a><br>
-         <i class="fas fa-phone"></i><a id="länk" href="tel:"> Ring oss</a><br>
-        </div>
-        
-        <div id="foljoss">
-        <h4>Följ oss</h4>
-        <i class="fab fa-instagram"></i><a id="länk" href="insta"> Instagram</a><br>
-        <i class="fab fa-facebook-f"></i> <a id="länk" href="fb"> Facebook</a><br>
-        <i class="fab fa-linkedin"></i><a id="länk" href="linkedin"> LinkedIn</a><br>
-        </div>
-        
-        <span id="betalning">
-        <h4>Betalningsmetoder</h4>
-        
-                Klarna <br>
-                Kortbetlaning 
-        </span>
+          <h4>Kundtjänst</h4>
 
-</footer>
-</div>
-</div>
-</body>
+          <i class="far fa-envelope"></i
+          ><a id="länk" href="mailto:"> Kontakta oss</a><br />
+          <i class="fas fa-phone"></i><a id="länk" href="tel:"> Ring oss</a
+          ><br />
+        </div>
+
+        <div id="foljoss">
+          <h4>Följ oss</h4>
+          <i class="fab fa-instagram"></i
+          ><a id="länk" href="insta"> Instagram</a><br />
+          <i class="fab fa-facebook-f"></i> <a id="länk" href="fb"> Facebook</a
+          ><br />
+          <i class="fab fa-linkedin"></i
+          ><a id="länk" href="linkedin"> LinkedIn</a><br />
+        </div>
+
+        <span id="betalning">
+          <h4>Betalningsmetoder</h4>
+
+          Klarna <br />
+          Kortbetlaning
+        </span>
+      </footer>
+    </div>
+  </body>
 </html>
