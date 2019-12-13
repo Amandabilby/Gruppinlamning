@@ -31,11 +31,11 @@ var products = {
 
 /* Kundvagn */
 var cart = {
-  data: null, // current shopping cart
+  data: null, 
 
   /* Localstorage */
   load: function() {
-    // load() : load previous shopping cart
+
 
     cart.data = localStorage.getItem("cart");
     if (cart.data == null) {
@@ -46,16 +46,15 @@ var cart = {
   },
 
   save: function() {
-    // save() : save current cart
+
 
     localStorage.setItem("cart", JSON.stringify(cart.data));
   },
 
-  /* Cart actions */
+  /* Kundvagn actions */
   add: function() {
-    // add() : add selected item to cart
 
-    // Update current cart
+    // Uppdaterar kundvagn
     if (cart.data[this.dataset.id] == undefined) {
       var product = products[this.dataset.id];
       cart.data[this.dataset.id] = {
@@ -68,13 +67,13 @@ var cart = {
     } else {
       cart.data[this.dataset.id]["qty"]++;
     }
-    // Save local storage + HTML update
+    // Sparar local storage + uppdaterar HTML
     cart.save();
     cart.list();
   },
 
   list: function() {
-    // list() : update HTML
+    // Uppdaterar HTML
 
     var container = document.getElementById("cart-listfaktura"),
       item = null,
@@ -83,7 +82,6 @@ var cart = {
     container.innerHTML = "";
 
     // Empty cart
-    // Credits : https://coderwall.com/p/_g3x9q/how-to-check-if-javascript-object-is-empty
     var isempty = function(obj) {
       for (var key in obj) {
         if (obj.hasOwnProperty(key)) {
@@ -169,7 +167,7 @@ var cart = {
   },
 
   change: function() {
-    // change() : change quantity
+    // Change qty
 
     if (this.value == 0) {
       delete cart.data[this.dataset.id];
@@ -181,7 +179,7 @@ var cart = {
   },
 
   reset: function() {
-    // reset() : empty cart
+    // Reset empty cart
 
     if (confirm("Vill du verkligen tömma kundvagnen?")) {
       cart.data = {};
@@ -191,12 +189,10 @@ var cart = {
   },
 
   checkout: function() {
-    // checkout() : checkout the cart
+    // Checkout cart
 
-    alert("TODO");
     location.replace("betala.html");
-    // Forward to confirmation page or directly add name, tel, email fields in the cart list.
-    // Send cart.data to the server and do further processing - email or save to database.
+  
   }
 };
 
@@ -233,7 +229,7 @@ function customerData(e) {
 
 document.getElementById("sbtn").addEventListener("click", customerData);
 
-//datum och random
+//Datum och fakturanummer
 
 const fakturaDatum = document.querySelector(".fakturaDatum");
 let d = new Date();

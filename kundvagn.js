@@ -1,5 +1,3 @@
-/* [A] PRODUCTS DATA */
-// Load products from the server via dynamic JS or AJAX
 var products = {
   1: {
     name: "Stilren",
@@ -31,7 +29,7 @@ var products = {
   }
 };
 
-/* [B] PRODUCTS HTML GRID GENERATOR */
+/* Products html/grid */
 window.addEventListener("load", function() {
   var container = document.getElementById("cart-products"),
     item = null,
@@ -40,31 +38,31 @@ window.addEventListener("load", function() {
     item = document.createElement("div");
     item.classList.add("p-item");
 
-    // Product Image
+    // Produkt bild
     part = document.createElement("img");
     part.src = products[i]["img"];
     part.classList.add("p-img");
     item.appendChild(part);
 
-    // Product Name
+    // Produkt namn
     part = document.createElement("div");
     part.innerHTML = products[i]["name"];
     part.classList.add("p-name");
     item.appendChild(part);
 
-    // Product Price
+    // Produkt pris
     part = document.createElement("div");
     part.innerHTML = products[i]["price"] + "kr exkl moms";
     part.classList.add("p-price");
     item.appendChild(part);
 
-    // Product Description
+    // Produkt beskrivning
     part = document.createElement("div");
     part.innerHTML = products[i]["desc"];
     part.classList.add("p-desc");
     item.appendChild(part);
 
-    // Add to cart
+    // Lägg till i kundvagn
     part = document.createElement("input");
     part.type = "button";
     part.value = "Lägg till i varukorg";
@@ -77,13 +75,12 @@ window.addEventListener("load", function() {
   }
 });
 
-/* [C] SHOPPING CART */
+/* Shopping cart */
 var cart = {
-  data: null, // current shopping cart
+  data: null, 
 
-  /* [C1] LOCALSTORAGE */
+  /* Localstorage */
   load: function() {
-    // load() : load previous shopping cart
 
     cart.data = localStorage.getItem("cart");
     if (cart.data == null) {
@@ -94,16 +91,16 @@ var cart = {
   },
 
   save: function() {
-    // save() : save current cart
+    // Sparar kundvagn innehåll
 
     localStorage.setItem("cart", JSON.stringify(cart.data));
   },
 
-  /* [C2] CART ACTIONS */
+  /* Cart actions */
   add: function() {
-    // add() : add selected item to cart
+    // Lägg till vald produkt i varukorg
 
-    // Update current cart
+    // Update cart
     if (cart.data[this.dataset.id] == undefined) {
       var product = products[this.dataset.id];
       cart.data[this.dataset.id] = {
@@ -116,13 +113,13 @@ var cart = {
     } else {
       cart.data[this.dataset.id]["qty"]++;
     }
-    // Save local storage + HTML update
+    // Spara local storage + html update
     cart.save();
     cart.list();
   },
 
   list: function() {
-    // list() : update HTML
+    // update html
 
     var container = document.getElementById("cart-list"),
       item = null,
@@ -131,7 +128,6 @@ var cart = {
     container.innerHTML = "";
 
     // Empty cart
-    // Credits : https://coderwall.com/p/_g3x9q/how-to-check-if-javascript-object-is-empty
     var isempty = function(obj) {
       for (var key in obj) {
         if (obj.hasOwnProperty(key)) {
@@ -156,7 +152,7 @@ var cart = {
         item.classList.add("c-item");
         product = cart.data[i];
 
-        // Quantity
+        // Qty
         part = document.createElement("input");
         part.type = "number";
         part.value = product["qty"];
@@ -217,7 +213,7 @@ var cart = {
   },
 
   change: function() {
-    // change() : change quantity
+    // change quantity
 
     if (this.value == 0) {
       delete cart.data[this.dataset.id];
@@ -229,7 +225,7 @@ var cart = {
   },
 
   reset: function() {
-    // reset() : empty cart
+    // empty cart
 
     if (confirm("Vill du verkligen tömma kundvagnen?")) {
       cart.data = {};
@@ -239,11 +235,10 @@ var cart = {
   },
 
   checkout: function() {
-    // checkout() : checkout the cart
+    // checkout the cart
 
     location.replace("betala.html");
-    // Forward to confirmation page or directly add name, tel, email fields in the cart list.
-    // Send cart.data to the server and do further processing - email or save to database.
+
   }
 };
 
@@ -253,5 +248,4 @@ window.addEventListener("load", function() {
   cart.list();
 });
 
-// LÄNK TILL HJÄLP https://code-boxx.com/simple-vanilla-javascript-shopping-cart/
 
