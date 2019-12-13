@@ -266,7 +266,7 @@ body {
   font-size: 20px; }
 
 .search-content img {
-  width: 300px; }
+  width: 100%; }
 
 .search-btn {
   background: #f0dae6;
