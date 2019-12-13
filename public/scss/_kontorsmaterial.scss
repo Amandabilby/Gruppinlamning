@@ -36,18 +36,19 @@
     font-weight: bold;
     letter-spacing: 4px;
     font-size: 13px;
+}
 
 
-    a:link {
+    #tillprodukterna:link {
     text-decoration: none;
     color: $link-col;
 }
 
-    a:visited {
+    #tillprodukterna:visited {
     text-decoration: none;
     color: $link-col;
 }
-}
+
 
 .leveransochfraktfritt {
     height: 4.3rem;

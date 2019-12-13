@@ -12,14 +12,16 @@
     text-transform: uppercase;
 }
 
-#länk:visited #länktvå:visited #länktre:visited {
-        text-decoration: none;
-        color: black;
-}
 
-#länk:link #länktvå:link #länktre:link {
+
+#a:link {
     text-decoration: none;
     color:black;
+}
+
+#a:visited {
+    text-decoration: none;
+    color: black;
 }
 
 h4 {
