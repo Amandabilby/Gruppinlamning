@@ -1,57 +1,90 @@
-.example {
-  position: absolute;
-  top: 5%;
-  left: 80%;
-  display: flex;
-  flex-direction: row;
-}
-
-/* Style the search field */
-form.example input[type=text] {
-  padding: 10px;
-  font-size: 17px;
-  border: 1px solid $light-gray;
-  float: left;
-  width: 130px;
-  background: #f1f1f1;
-  font-family: $font-fam;
-}
-
-/* Style the submit button */
-form.example button {
-  float: left;
-  width: 20%;
-  padding: 10px;
-  background: $light-gray;
-  color: white;
-  font-size: 17px;
-  border: 1px solid $light-gray;
-  border-left: none; /* Prevent double borders */
+.dropbtn {
+  background: $nav-back;
+  color: $bgcol-white;
+  padding: 16px;
+  font-size: 18px;
+  border: none;
   cursor: pointer;
-  font-family: $font-fam;
-
+  border-radius: 10px;
 }
 
-form.example button:hover {
-  background: $light-pink;
+.dropbtn:focus {
+  outline: none;
 }
 
-/* Clear floats */
-form.example::after {
-  content: "";
-  clear: both;
-  display: table;
+.dropbtn:hover {
+  color: $link-col;
 }
 
+#myInput {
+  box-sizing: border-box;
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 17px;
+  padding: 14px 10px 12px 45px;
+  background: $nav-back;
+  border: solid 1px $link-col;
+  border-radius: 10px;
+}
 
-@media screen and (max-width: 760px) {
-  .example {
-    position: absolute;
-    top: 5%;
-    left: 60%;
-    display: flex;
-    flex-direction: row;
+#myInput::placeholder {
+  color: $link-col;
+}
+
+#myInput:focus::placeholder {
+  color: $bgcol-white;
+}
+
+#myInput:focus {
+  outline: none;
+  color: $bgcol-white;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-left: 60%;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: none;
+  min-width: 245px;
+  overflow: auto;
+  z-index: 1;
+}
+
+.dropdown-content {
+  a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
   }
-     
 }
 
+.show {
+  display: block;
+}
+
+.search-content {
+  color: white;
+  background: $nav-back;
+  border-radius: 10px;
+  border: solid 1px $link-col;
+  white-space: nowrap;
+  font-size: 20px;
+}
+
+.search-content img {
+  width: 300px;
+}
+
+.search-btn {
+  background: $light-pink;
+  border: none;
+}
+
+.search-btn:focus {
+  outline: none;
+}

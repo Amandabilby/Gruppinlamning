@@ -199,53 +199,79 @@ body {
   margin: auto;
   width: 90%; }
 
-.example {
-  position: absolute;
-  top: 5%;
-  left: 80%;
-  display: flex;
-  flex-direction: row; }
-
-/* Style the search field */
-form.example input[type=text] {
-  padding: 10px;
-  font-size: 17px;
-  border: 1px solid #e7e7e9;
-  float: left;
-  width: 130px;
-  background: #f1f1f1;
-  font-family: "Abel", sans-serif; }
-
-/* Style the submit button */
-form.example button {
-  float: left;
-  width: 20%;
-  padding: 10px;
-  background: #e7e7e9;
+.dropbtn {
+  background: lightgrey;
   color: white;
-  font-size: 17px;
-  border: 1px solid #e7e7e9;
-  border-left: none;
-  /* Prevent double borders */
+  padding: 16px;
+  font-size: 18px;
+  border: none;
   cursor: pointer;
-  font-family: "Abel", sans-serif; }
+  border-radius: 10px; }
 
-form.example button:hover {
-  background: #f0dae6; }
+.dropbtn:focus {
+  outline: none; }
 
-/* Clear floats */
-form.example::after {
-  content: "";
-  clear: both;
-  display: table; }
+.dropbtn:hover {
+  color: gray; }
 
-@media screen and (max-width: 760px) {
-  .example {
-    position: absolute;
-    top: 5%;
-    left: 60%;
-    display: flex;
-    flex-direction: row; } }
+#myInput {
+  box-sizing: border-box;
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 17px;
+  padding: 14px 10px 12px 45px;
+  background: lightgrey;
+  border: solid 1px gray;
+  border-radius: 10px; }
+
+#myInput::placeholder {
+  color: gray; }
+
+#myInput:focus::placeholder {
+  color: white; }
+
+#myInput:focus {
+  outline: none;
+  color: white; }
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-left: 60%; }
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: none;
+  min-width: 245px;
+  overflow: auto;
+  z-index: 1; }
+
+.dropdown-content a {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block; }
+
+.show {
+  display: block; }
+
+.search-content {
+  color: white;
+  background: lightgrey;
+  border-radius: 10px;
+  border: solid 1px gray;
+  white-space: nowrap;
+  font-size: 20px; }
+
+.search-content img {
+  width: 300px; }
+
+.search-btn {
+  background: #f0dae6;
+  border: none; }
+
+.search-btn:focus {
+  outline: none; }
 
 /* Css till produkter */
 #produktrubrik {
