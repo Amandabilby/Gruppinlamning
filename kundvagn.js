@@ -178,22 +178,22 @@ var cart = {
       }
 
       // FRI FRAKT
-      item = document.createElement("input");
-      item.innerHTML = "innerHTML";
+      item = document.createElement("div");
+      item.innerHTML = "Fri frakt!";
       item.value = "Fri frakt!";
       item.classList.add("c-checkoutmoms");
       container.appendChild(item);
 
       // TOTALT BELOPP EXKL MOMS
-      item = document.createElement("input");
-      item.innerHTML = "innerHTML";
+      item = document.createElement("div");
+      item.innerHTML = "Totalt belopp exkl. moms    " + total + " kr";
       item.value = "Totalt belopp exkl. moms    " + total + " kr";
       item.classList.add("c-checkoutmoms");
       container.appendChild(item);
 
       // TOTALT BELOPP INKL MOMS
-      item = document.createElement("input");
-      item.innerHTML = "innerHTML";
+      item = document.createElement("div");
+      item.innerHTML = "Totalt belopp inkl. moms    " + total * 1.25 + " kr";
       item.value = "Totalt belopp inkl. moms    " + total * 1.25 + " kr";
       item.classList.add("c-checkoutexmoms");
       container.appendChild(item);

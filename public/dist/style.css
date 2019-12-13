@@ -243,7 +243,6 @@ form.example::after {
     display: flex;
     flex-direction: row; } }
 
-/* [PAGE & WRAPPER] */
 #produktrubrik {
   margin: auto;
   top: 20%;

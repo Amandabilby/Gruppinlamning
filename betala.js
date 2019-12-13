@@ -145,22 +145,22 @@ var cart = {
       //
 
       // TOTALT BELOPP EXKL MOMS
-      item = document.createElement("input");
-      item.innerHTML = "innerHTML";
+      item = document.createElement("div");
+      item.innerHTML = "Totalt belopp före moms    " + total + " kr"; 
       item.value = "Totalt belopp före moms    " + total + " kr";
       item.classList.add("c-checkoutmomsfaktura");
       container.appendChild(item);
 
       // TOTALT BELOPP INKL MOMS
-      item = document.createElement("input");
-      item.innerHTML = "innerHTML";
+      item = document.createElement("div");
+      item.innerHTML = "Totalt belopp före moms    " + total + " kr";
       item.value = "Total moms 25%    " + total * 0.25 + " kr";
       item.classList.add("c-checkoutexmomsfaktura");
       container.appendChild(item);
 
       // CHECKOUT BUTTONS
-      item = document.createElement("input");
-      item.type = "innerHTML";
+      item = document.createElement("div");
+      item.innerHTML = "Summa att betala inklusive moms " + total * 1.25 + "kr inkl moms";
       item.value =
         "Summa att betala inklusive moms " + total * 1.25 + "kr inkl moms";
       item.classList.add("c-checkoutfaktura");
