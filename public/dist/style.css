@@ -128,25 +128,28 @@ body {
     overflow: scroll;
     font-size: 14px; } }
 
-.navbar {
+/* Css till navbar */
+.navbar ul {
   background: #e7e7e9;
-  display: flex;
-  padding-right: 38px;
-  overflow: hidden;
   list-style-type: none;
   justify-content: space-around;
-  border: 1rem solid white; }
-  .navbar li a {
-    display: block;
-    text-align: center;
-    padding: 14px 16px;
-    color: white;
-    opacity: 1;
-    transition: 0.2s;
-    text-decoration: none; }
-  .navbar li a:hover {
-    color: black;
-    opacity: 1; }
+  border: 1 rem solid white;
+  overflow: hidden;
+  padding-right: 38px;
+  display: flex; }
+
+.navbar li a {
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  color: black;
+  opacity: 1;
+  transition: 0.2s;
+  text-decoration: none; }
+
+.navbar li a:hover {
+  color: white;
+  opacity: 1; }
 
 /* Css till footer */
 .footer {
