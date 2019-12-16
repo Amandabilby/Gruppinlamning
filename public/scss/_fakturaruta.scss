@@ -1,218 +1,203 @@
+/* Css till fakturaan */
+.containerfaktura {
+  font-family: "Abel", sans-serif;
+  margin-left: 5%;
+}
 
-                /* Css till fakturaan */
-                .containerfaktura {
-                    font-family: 'Abel', sans-serif;
-                    margin-left: 5%;
-                    }
-                    
-                    h3{
-                        font-family: 'Staatliches', cursive;
-                    }
-                    
-                    #loggafaktura {
-                        position: absolute;
-                        top: 10%;
-                        left: 60%;
-                    }
-                    
-                    .fakta{
-                        display:flex;
-                        justify-content: flex-start;
-                        margin-left: -2.5rem;
-                    }
-                    
-                    .fakta__konstanter {
-                        font-weight: bold;
-                    }
-                    ul{
-                        list-style: none;
-                    }
-                    li{
-                        list-style:none;
-                    }
-                    
-                    #pdfbtn {
-                    
-                        background-color:#555;
-                        color: white;
-                        padding: 16px 20px;
-                        border: none;
-                        cursor: pointer;
-                        opacity: 0.8;
-                        
-                        
-                    }
+h3 {
+  font-family: "Staatliches", cursive;
+}
 
-                    #pdfbtn:hover {
-                        opacity: 0.6;
-                    }
-                    
-                    #betalningrubrik {
-                        position: relative;
-                    
-                        font-family: 'Staatliches', cursive;
-                    
-                                    }
-                     #cart-listfaktura {
-                      background: #fff;
-                      height: 50%;
-                      width: 80%;
-                      border: 10px solid #e7e7e9;
-                      position: relative;
-                      top: 50px;
-                      display: grid;
+#loggafaktura {
+  position: absolute;
+  top: 10%;
+  left: 60%;
+}
 
-                     }
+.fakta {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: -2.5rem;
+}
 
-                    
-                    
-                    .c-itemfaktura {
-                      padding: 10px;
-                      margin-bottom: 10px;
+.fakta__konstanter {
+  font-weight: bold;
+}
+ul {
+  list-style: none;
+}
+li {
+  list-style: none;
+}
 
-                    }
-                    .c-qtyfaktura, .c-name {
-                      display: inline-block;
-                    }
-                    .c-qtyfaktura {
-                      margin-right: 10px;
-                      width: 2rem;
-                      font-size: 12px;
-                      padding: 15px;
-                      background: #e7e7e9;
-                      border: 1px solid black;
-                    }
+#pdfbtn {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+}
 
-                    .c-checkoutfaktura {
-                      background: #fff;
-                      font-display: uppercase;
-                      font-size: 16px;
-                      padding: 15px;
-                    
-                    }
-                    
-                    
-                    .c-checkoutmomsfaktura {
-                      font-family: $font-fam;
-                      background: #fff;
-                      font-size: 12px;
-                      padding: 15px;
-                      background: #e7e7e9;
-                      border: none;
-                    
-                    }
-                    
-                    .c-checkoutexmomsfaktura {
-                      font-family: $font-fam;
-                      background: #fff;
-                      font-size: 16px;
-                      font-weight: bold;
-                      padding: 15px;
-                      background: #e7e7e9;
-                      border: none;
+#pdfbtn:hover {
+  opacity: 0.6;
+}
 
-                    
-                    }
-                    
-                    .closebtn {
-                        font-family: $font-fam;
-                      background: #fff;
-                      font-size: 12px;
-                      padding: 10px;
-                      background: #e7e7e9;
-                      border: none;
-                      margin-right: 10px;
-                    
-                      
-                    }
-                    
-                    .btn {
-                        font-family: $font-fam;
-                      background: #fff;
-                      font-size: 12px;
-                      padding: 10px;
-                      background: #e7e7e9;
-                      border: none;
-                    
-                    }
-                    
-                    /* popup */
-                    
-                    .form-popup {
-                        display: none;
-                        position: absolute;
-                        bottom: 15%;
-                        left: 50%;
-                        border: 3px solid #f1f1f1;
-                        z-index: 9;
-                        margin:1rem;
-                      }
-                    
-                      .open-button {
-                        background-color:#555;
-                        color: white;
-                        padding: 16px 20px;
-                        border: none;
-                        cursor: pointer;
-                        opacity: 0.8;
-                        
-                        margin:1rem;
-                      }
+#betalningrubrik {
+  position: relative;
 
-                      .open-button:hover {
-                        opacity: 0.6;
-                    }
-                    
-                      .form-container {
-                        max-width: 300px;
-                        padding: 10px;
-                        background-color: white;
-                      }
-                    
-                      .form-container input[type=text], .form-container input[type=text] {
-                        width:90%;
-                        padding: 15px;
-                        margin: 5px 0 22px 0;
-                        border: none;
-                        background: #f1f1f1;
-                      }
-                    
-                      .form-container input[type=text]:focus, .form-container input[type=text]:focus {
-                        background-color: #ddd;
-                        outline: none;
-                      }
+  font-family: "Staatliches", cursive;
+}
+#cart-listfaktura {
+  background: #fff;
+  height: 50%;
+  width: 80%;
+  border: 10px solid #e7e7e9;
+  position: relative;
+  top: 50px;
+  display: grid;
+}
 
-                      .fakturafooter {
-                          display: flex;
-                          flex-direction: row;
-                          justify-content: space-around;
-                          width: 80%;
-                      }
+.c-itemfaktura {
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.c-qtyfaktura,
+.c-name {
+  display: inline-block;
+}
+.c-qtyfaktura {
+  margin-right: 10px;
+  width: 2rem;
+  font-size: 12px;
+  padding: 15px;
+  background: #e7e7e9;
+  border: 1px solid black;
+}
 
-                      hr {
-                          float: left;
-                      }
-                    
-                      @media screen and (max-width: 600px) {
-                          #cart-listfaktura {
-                              font-size: 12px;
-                          }
-                          .c-checkoutfaktura {
-                            font-size: 12px;
-                        }
-                          .c-checkoutmomsfaktura {
-                            font-size: 14px;
-                        }
-                          .c-checkoutexmomsfaktura {
-                              font-size: 14px;
-                          }
+.c-checkoutfaktura {
+  background: #fff;
+  font-display: uppercase;
+  font-size: 16px;
+  padding: 15px;
+}
 
-                          #loggafaktura {
-                            position: absolute;
-                            top: 5%;
-                            left: 60%;
-                            width: 100px;
-                            height:50px;
-                        }
+.c-checkoutmomsfaktura {
+  font-family: $font-fam;
+  background: #fff;
+  font-size: 12px;
+  padding: 15px;
+  background: #e7e7e9;
+  border: none;
+}
 
-                      }
+.c-checkoutexmomsfaktura {
+  font-family: $font-fam;
+  background: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 15px;
+  background: #e7e7e9;
+  border: none;
+}
+
+.closebtn {
+  font-family: $font-fam;
+  background: #fff;
+  font-size: 12px;
+  padding: 10px;
+  background: #e7e7e9;
+  border: none;
+  margin-right: 10px;
+}
+
+.btn {
+  font-family: $font-fam;
+  background: #fff;
+  font-size: 12px;
+  padding: 10px;
+  background: #e7e7e9;
+  border: none;
+}
+
+/* popup */
+
+.form-popup {
+  display: none;
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+  margin: 1rem;
+}
+
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+
+  margin: 1rem;
+}
+
+.open-button:hover {
+  opacity: 0.6;
+}
+
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+.form-container input[type="text"],
+.form-container input[type="text"] {
+  width: 90%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+.form-container input[type="text"]:focus,
+.form-container input[type="text"]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.fakturafooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 80%;
+}
+
+hr {
+  float: left;
+}
+
+@media screen and (max-width: 600px) {
+  #cart-listfaktura {
+    font-size: 12px;
+  }
+  .c-checkoutfaktura {
+    font-size: 12px;
+  }
+  .c-checkoutmomsfaktura {
+    font-size: 14px;
+  }
+  .c-checkoutexmomsfaktura {
+    font-size: 14px;
+  }
+
+  #loggafaktura {
+    position: absolute;
+    top: 5%;
+    left: 60%;
+    width: 100px;
+    height: 50px;
+  }
+}

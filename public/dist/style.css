@@ -159,10 +159,10 @@ body {
   .footer .copy {
     font-size: 12px;
     text-transform: uppercase; }
-  .footer #a:link {
+  .footer a:link {
     text-decoration: none;
     color: black; }
-  .footer #a:visited {
+  .footer a:visited {
     text-decoration: none;
     color: black; }
   .footer h4 {
@@ -472,11 +472,11 @@ body {
 
 /* Css till fakturaan */
 .containerfaktura {
-  font-family: 'Abel', sans-serif;
+  font-family: "Abel", sans-serif;
   margin-left: 5%; }
 
 h3 {
-  font-family: 'Staatliches', cursive; }
+  font-family: "Staatliches", cursive; }
 
 #loggafaktura {
   position: absolute;
@@ -510,7 +510,7 @@ li {
 
 #betalningrubrik {
   position: relative;
-  font-family: 'Staatliches', cursive; }
+  font-family: "Staatliches", cursive; }
 
 #cart-listfaktura {
   background: #fff;
@@ -525,7 +525,8 @@ li {
   padding: 10px;
   margin-bottom: 10px; }
 
-.c-qtyfaktura, .c-name {
+.c-qtyfaktura,
+.c-name {
   display: inline-block; }
 
 .c-qtyfaktura {
@@ -603,14 +604,16 @@ li {
   padding: 10px;
   background-color: white; }
 
-.form-container input[type=text], .form-container input[type=text] {
+.form-container input[type="text"],
+.form-container input[type="text"] {
   width: 90%;
   padding: 15px;
   margin: 5px 0 22px 0;
   border: none;
   background: #f1f1f1; }
 
-.form-container input[type=text]:focus, .form-container input[type=text]:focus {
+.form-container input[type="text"]:focus,
+.form-container input[type="text"]:focus {
   background-color: #ddd;
   outline: none; }
 
