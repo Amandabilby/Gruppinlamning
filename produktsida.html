@@ -46,39 +46,44 @@
               id="myInput"
               onkeyup="filterFunction()"
             />
-            <a class="search-content" href="#stilren"
+            <a class="search-content"
               ><img
                 src="public/bilder/Simpledesk.jpeg"
                 alt="Bild"
-              /><br />Stilren <b>3.000kr</b><br /><button class="search-btn">
-                Lägg till i kundvagnen
-              </button></a
+              /><br />Stilren <b>3.000kr</b>
+              <div onclick="scrollWin(), myFunction()" class="search-btn">
+                Till produkt
+              </div></a
             >
-            <a class="search-content" href="#jordnära"
+            <a class="search-content"
               ><img
                 src="public/bilder/Earthtonesoffice.jpeg"
                 alt="Bild"
-              /><br />Jordnära <b>8.000kr</b><br /><button class="search-btn">
-                Lägg till i kundvagnen
-              </button></a
+              /><br />Jordnära <b>8.000kr</b>
+              <div onclick="scrollWin(), myFunction()" class="search-btn">
+                Till produkt
+              </div></a
             >
-            <a class="search-content" href="#havet"
+            <a class="search-content"
               ><img
                 src="public/bilder/coloroffice.jpeg"
                 alt="Bild"
-              /><br />Havet <b>10.000kr</b><br /><button class="search-btn">
-                Lägg till i kundvagnen
-              </button></a
+              /><br />Havet <b>10.000kr</b>
+              <div onclick="scrollWin2(), myFunction()" class="search-btn">
+                Till produkt
+              </div></a
             >
-            <a class="search-content" href="#mediapaketet"
+            <a class="search-content"
               ><img
                 src="public/bilder/Productshots.jpeg"
                 alt="Bild"
-              /><br />Mediapaketet <b>15.000kr</b><br /><button
-                class="search-btn"
+              /><br />Mediapaketet <b>15.000kr</b><br />
+              <div
+                onclick="scrollWin2(), myFunction()"
+                class="search-btn-mediepaketet"
               >
-                Lägg till i kundvagnen
-              </button></a
+                Till produkt
+              </div></a
             >
           </div>
         </div>
@@ -86,34 +91,32 @@
         <!-- Nav bar -->
         <div class="navbar">
           <ul>
-          <li><a href="index.html">Hem</a></li>
-          <li><a class="active" href="produktsida.html">Produkter</a></li>
-        </ul>
+            <li><a href="index.html">Hem</a></li>
+            <li><a class="active" href="produktsida.html">Produkter</a></li>
+          </ul>
         </div>
       </div>
 
       <!-- Produkter -->
 
       <h2 id="produktrubrik">Våra paket</h2>
-      <hr>
+      <hr />
       <div id="cart-wrap">
         <div class="cart-productss" id="cart-products"></div>
         <div id="cart-list"></div>
       </div>
 
-      
-        <!-- Footer  -->
-        
+      <!-- Footer  -->
+
       <footer class="footer">
-        
-          <div class="loggacopy">
-              <br />
-              <img class="logga" src="public/bilder/logga.png" alt="logga" />
-              <br /><br />
-              <div class="copy">
-                &copy; Kontex kontorsmaterial AB
-              </div>
-            </div>
+        <div class="loggacopy">
+          <br />
+          <img class="logga" src="public/bilder/logga.png" alt="logga" />
+          <br /><br />
+          <div class="copy">
+            &copy; Kontex kontorsmaterial AB
+          </div>
+        </div>
 
         <div id="kontex">
           <h4>Kontex</h4>
@@ -136,8 +139,8 @@
           <h4>Följ oss</h4>
           <i class="fab fa-instagram"></i
           ><a id="länksex" href="insta"> Instagram</a><br />
-          <i class="fab fa-facebook-f"></i> <a id="länktvå" href="fb"> Facebook</a
-          ><br />
+          <i class="fab fa-facebook-f"></i>
+          <a id="länktvå" href="fb"> Facebook</a><br />
           <i class="fab fa-linkedin"></i
           ><a id="länktre" href="linkedin"> LinkedIn</a><br />
         </div>
@@ -149,7 +152,6 @@
           Kortbetlaning
         </div>
       </footer>
-        
     </div>
     <script src="search.js"></script>
   </body>

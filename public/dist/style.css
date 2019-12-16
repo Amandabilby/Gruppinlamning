@@ -250,7 +250,8 @@ body {
   background-color: none;
   min-width: 245px;
   overflow: auto;
-  z-index: 1; }
+  z-index: 1;
+  cursor: normal; }
 
 .dropdown-content a {
   padding: 12px 16px;
@@ -273,10 +274,20 @@ body {
 
 .search-btn {
   background: #f0dae6;
-  border: none; }
+  width: 37%;
+  height: 10%;
+  padding: 0% 3% 0% 3%;
+  border-radius: 10px;
+  float: right;
+  color: gray; }
 
-.search-btn:focus {
-  outline: none; }
+.search-btn-mediepaketet {
+  background: #f0dae6;
+  width: 37%;
+  height: 10%;
+  padding: 0% 3% 0% 3%;
+  border-radius: 10px;
+  color: gray; }
 
 /* Css till produkter */
 #produktrubrik {

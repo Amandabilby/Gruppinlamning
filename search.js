@@ -17,3 +17,11 @@ function filterFunction() {
     }
   }
 }
+
+function scrollWin() {
+  window.scrollTo(0, 400);
+}
+
+function scrollWin2() {
+  window.scrollTo(0, 955);
+}
