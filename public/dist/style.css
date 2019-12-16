@@ -250,13 +250,13 @@ body {
   background-color: none;
   min-width: 245px;
   overflow: auto;
-  z-index: 1;
-  cursor: normal; }
+  z-index: 1; }
 
 .dropdown-content a {
   padding: 12px 16px;
   text-decoration: none;
-  display: block; }
+  display: block;
+  cursor: default; }
 
 .show {
   display: block; }
@@ -279,7 +279,8 @@ body {
   padding: 0% 3% 0% 3%;
   border-radius: 10px;
   float: right;
-  color: gray; }
+  color: gray;
+  cursor: pointer; }
 
 .search-btn-mediepaketet {
   background: #f0dae6;
